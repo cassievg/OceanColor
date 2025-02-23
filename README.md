@@ -1,2 +1,2 @@
-# Ocean Color Environment
+# Ocean Color
 Help desk ticketing system for Ocean Color
