@@ -1,0 +1,82 @@
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #ffe6ec; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.nav-items-top {
+  margin-bottom: 20px; 
+}
+
+.nav-link {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #e91e63; /* Pink text *
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #d81b60; /* Darker pink on hover */
+}
+
+.nav-link.active {
+  color: #d81b60;
+}
+
+.account-section {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  background-color: #cc3366;
+  border-color: #cc3366;
+  color: white !important;
+  font-weight: 500;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logout-btn:hover {
+  background-color: #d32d67;
+  border-color: #ac315c;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    width: 200px;
+  }
+
+  .logout-btn {
+    margin-top: 60px;
+  }
+}
+
+
+/* Brand name style with adjusted position */
+.brand-name {
+  font-size: 28px;
+  font-weight: 500;
+  font-style: italic;
+  color: #e91e63;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: -10px; 
+  display: block;
+  text-align: left; /* Align text to the left */
+}
