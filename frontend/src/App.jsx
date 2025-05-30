@@ -24,6 +24,7 @@ import StaffManager from './pages/Admin/StaffManager';
 
 import './App.css';
 
+
 function App() {
     return (
         <CartProvider>
@@ -62,6 +63,7 @@ function App() {
                 </Routes>
             </div>
         </CartProvider>
+        
     );
 }
 
