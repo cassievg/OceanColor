@@ -24,4 +24,29 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+
+router.post('/', async (req, res) => {
+    const user = req.body;
+    const newUser = new User({ ...user });
+
+    try {
+    const savedUser = await newUser.save();
+    res.status(201).json(savedUser);
+    } catch (err) {
+    res.status(400).json({ message: err.message });
+    }
+});
+
+
+router.delete('/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        await User.findByIdAndDelete(id);
+        res.json({ message: 'User deleted' });
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+});
+
 export default router;
