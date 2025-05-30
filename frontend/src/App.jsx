@@ -15,7 +15,7 @@ import TicketManagement from './pages/Staff/TicketManagement';
 import StaffManagement from './pages/Admin/StaffManagement';
 import PrivateRoute from './components/PrivateRoute';
 import { CartProvider } from './Context/CartContext';
-import Navbar from './components/navbar';
+import Navbar from './components/NavBar/navbar';
 
 function App() {
     return (

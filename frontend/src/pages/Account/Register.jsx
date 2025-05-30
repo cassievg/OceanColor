@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
+  const [name, setName] = useState('');
+  const [phonenumber, setPhonenumber] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -37,10 +39,24 @@ const Register = () => {
         <h2 className="signup-title">Sign Up</h2>
         <form onSubmit={handleSignup}>
           <input 
+            type="text" 
+            placeholder="Name" 
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+            required 
+          />
+          <input 
             type="email" 
             placeholder="Email" 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
+            required 
+          />
+          <input 
+            type="number" 
+            placeholder="Phonenumber" 
+            value={phonenumber} 
+            onChange={(e) => setPhonenumber(e.target.value)} 
             required 
           />
           <input 
