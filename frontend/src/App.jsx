@@ -43,7 +43,11 @@ function App() {
                 <Routes>
                     {/* Public Routes */}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     <Route path="/" element={<StaffManager />} />
+=======
+                    <Route path="/" element={<ProfileEdit />} />
+>>>>>>> Stashed changes
 =======
                     <Route path="/" element={<ProfileEdit />} />
 >>>>>>> Stashed changes
