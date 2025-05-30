@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+    font-size: 2.8vh;
+    color: black;
+}
+
+h3 {
+    text-align: left;
+    font-size: 2.5vh;
+    color: black;
+}
+
+p {
+    text-align: left;
+    font-size: 2.0vh;
+    color: black;
+}
+
+.branch-details {
+    align-content: center;
+    text-align: center;
+}
+
+.branch-details h3, .branch-details p {
+    text-align: center !important;
+}
+
+.accordion-item button:hover {
+    background-color: #ffc1c1;
+}
+
+.accordion-item button {
+    transition: 0.29s;
+}
+
+.abtusContain {
+    position: relative;
+    padding-left: 15vw;
+    width: 80vw;
+    height: 90vh;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-y: auto;
+}

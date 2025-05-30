@@ -1,8 +1,8 @@
-.nav-link {
+nav .nav-link {
     color: black;
 }
 
-.nav-brand{
+nav .nav-brand{
     color: black;
 }
 
@@ -17,29 +17,30 @@ nav {
     position: absolute;
     left: 0px;
     top: 0px;
+    width: 20%;
     height: 100%;
     text-align: left;
     overflow: hidden;
     background-color: #FF8282;
 }
 
-.navlink, .brand {
+nav .navlink, .brand {
     border-bottom: 1px solid black;
 }
 
-.nav-brand:hover {
+nav .nav-brand:hover {
     color: black;
 }
 
-.navlink, .nav-link {
+nav .navlink, .nav-link {
     transition: 0.29s;
 }
 
-.nav-link:hover {
+nav .nav-link:hover {
     color: black;
 }
 
-.navlink:hover {
+nav .navlink:hover {
     background-color: #ffc1c1;
     color: black;
 }
@@ -53,7 +54,7 @@ nav {
     height: 6.5vh;
     text-align: center;
     border: 1px solid black;
-    width: 80%;
+    width: 80% !important;
     transition: 0.29s;
 }
 
