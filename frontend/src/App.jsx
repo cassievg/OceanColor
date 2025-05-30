@@ -16,14 +16,13 @@ import StaffManagement from './pages/Admin/StaffManagement';
 import PrivateRoute from './components/PrivateRoute';
 import { CartProvider } from './Context/CartContext';
 import Navbar from './components/NavBar/navbar';
-import Profile from './pages/Profile/Profile';
-import ProfileEdit from './pages/Profile/ProfileEdit';
-import TicketList from './pages/Customer/TicketList/index';
-import UpdateTicket from './pages/Customer/UpdateTicket/index';
-import Dashboard from './pages/Customer/Dashboard/index';
+import TicketList from './pages/TicketList/index';
+import ApproveTicket from './pages/Customer/ApproveTicket/index';
+import CustDashboard from './pages/Customer/CustDashboard/index';
+import UpdateTicket from './pages/Staff/UpdateTicket';
+import StaffManager from './pages/Admin/StaffManager';
 
 import './App.css';
-
 
 function App() {
     return (
