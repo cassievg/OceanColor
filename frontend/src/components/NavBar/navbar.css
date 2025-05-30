@@ -22,12 +22,12 @@
 .nav-link {
   margin: 15px 0;
   font-size: 16px;
-  color: #e91e63; /* Pink text *
+  color: #e91e63; /* Pink text */
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #d81b60; /* Darker pink on hover */
+  color: #79032e; /* Darker pink on hover */
 }
 
 .nav-link.active {
