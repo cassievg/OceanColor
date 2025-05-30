@@ -16,6 +16,7 @@ import StaffManagement from './pages/Admin/StaffManagement';
 import PrivateRoute from './components/PrivateRoute';
 import { CartProvider } from './Context/CartContext';
 import Navbar from './components/NavBar/navbar';
+import Profile from './pages/Profile/Profile';
 import TicketList from './pages/Customer/TicketList/index';
 import UpdateTicket from './pages/Customer/UpdateTicket/index';
 import Dashboard from './pages/Customer/Dashboard/index';
@@ -25,6 +26,14 @@ import './App.css';
 function App() {
     return (
         <CartProvider>
+            <Navbar />
+            <Routes>
+                {/* Public Routes */}
+                <Route path="/" element={<Profile />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                {/* <Route path="/shop" element={<Shop />} />
+                <Route path="/cart" element={<Cart />} /> */}
             <div className='app-container'>
                 <Navbar />
                 <Routes>
