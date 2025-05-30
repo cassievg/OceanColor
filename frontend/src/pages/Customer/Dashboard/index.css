@@ -1,0 +1,8 @@
+.dashboard-container {
+    flex: 1;
+    padding: 5vh;
+}
+
+.status-tables {
+    display: flex;
+}

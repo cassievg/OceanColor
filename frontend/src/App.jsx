@@ -15,43 +15,50 @@ import TicketManagement from './pages/Staff/TicketManagement';
 import StaffManagement from './pages/Admin/StaffManagement';
 import PrivateRoute from './components/PrivateRoute';
 import { CartProvider } from './Context/CartContext';
-import Navbar from './components/navbar';
+import Navbar from './components/NavBar/navbar';
+import TicketList from './pages/Customer/TicketList/index';
+import UpdateTicket from './pages/Customer/UpdateTicket/index';
+import Dashboard from './pages/Customer/Dashboard/index';
+
+import './App.css';
 
 function App() {
     return (
         <CartProvider>
-            <Navbar />
-            <Routes>
-                {/* Public Routes */}
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                {/* <Route path="/shop" element={<Shop />} />
-                <Route path="/cart" element={<Cart />} /> */}
+            <div className='app-container'>
+                <Navbar />
+                <Routes>
+                    {/* Public Routes */}
+                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    {/* <Route path="/shop" element={<Shop />} />
+                    <Route path="/cart" element={<Cart />} /> */}
 
-                {/* Account Routes */}
-                <Route path="/account">
-                    <Route index element={<Account />} />
-                    <Route path="login" element={<Login />} />
-                    <Route path="register" element={<Register />} />
-                </Route>
+                    {/* Account Routes */}
+                    <Route path="/account">
+                        <Route index element={<Account />} />
+                        <Route path="login" element={<Login />} />
+                        <Route path="register" element={<Register />} />
+                    </Route>
 
-                {/* Protected Routes */}
-                <Route path="/account/settings" element={<Settings />} />
+                    {/* Protected Routes */}
+                    <Route path="/account/settings" element={<Settings />} />
 
-                {/* Customer-only Routes */}
-                <Route path="/" element={<Home />} />
-                <Route path="/customerpage/about" element={<About />} />
-                <Route path="/customerpage/contact" element={<Contact />} />
-                {/* <Route path="/customerpage/shop" element={<Shop />} />
-                <Route path="/customerpage/cart" element={<Cart />} /> */}
+                    {/* Customer-only Routes */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/customerpage/about" element={<About />} />
+                    <Route path="/customerpage/contact" element={<Contact />} />
+                    {/* <Route path="/customerpage/shop" element={<Shop />} />
+                    <Route path="/customerpage/cart" element={<Cart />} /> */}
 
-                {/* Staff-only Routes */}
-                {/* <Route path="/staff/tickets" element={<TicketManagement />} /> */}
+                    {/* Staff-only Routes */}
+                    {/* <Route path="/staff/tickets" element={<TicketManagement />} /> */}
 
-                {/* Admin-only Routes */}
-                {/* <Route path="/admin/staff" element={<StaffManagement />} /> */}
-            </Routes>
+                    {/* Admin-only Routes */}
+                    {/* <Route path="/admin/staff" element={<StaffManagement />} /> */}
+                </Routes>
+            </div>
         </CartProvider>
     );
 }
