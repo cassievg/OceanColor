@@ -26,7 +26,6 @@ import CreateTicket from './pages/Customer/CreateTicket';
 import './App.css';
 import StaffDashboard from './pages/Staff/StaffDashboard';
 
-
 function App() {
     return (
         <CartProvider>
@@ -57,8 +56,8 @@ function App() {
                     {/* <Route path="/customerpage/shop" element={<Shop />} />
                     <Route path="/customerpage/cart" element={<Cart />} /> */}
 
-                    {/* Staff-only Routes */}
-                    {/* <Route path="/staff/tickets" element={<TicketManagement />} /> */}
+                        {/* Staff-only Routes */}
+                        {/* <Route path="/staff/tickets" element={<TicketManagement />} /> */}
 
                     {/* Admin-only Routes */}
                     {/* <Route path="/admin/staff" element={<StaffManagement />} /> */}
