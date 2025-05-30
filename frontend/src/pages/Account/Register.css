@@ -41,6 +41,8 @@
 
 /* Input Fields */
 .signup-container input[type="email"],
+.signup-container input[type="text"],
+.signup-container input[type="number"],
 .signup-container input[type="password"] {
   border-radius: 8px;
   border: 1px solid #ddd;
@@ -54,6 +56,8 @@
 }
 
 .signup-container input[type="email"]:focus,
+.signup-container input[type="text"]:focus,
+.signup-container input[type="number"]:focus,
 .signup-container input[type="password"]:focus {
   border-color: #cc3366; /* Highlight border on focus */
   background-color: #fff;
@@ -61,6 +65,8 @@
 }
 
 .signup-container input[type="email"],
+.signup-container input[type="text"],
+.signup-container input[type="number"],
 .signup-container input[type="password"] {
   padding-left: 15px; /* Add padding for better text alignment */
 }
@@ -113,6 +119,8 @@
   }
 
   .signup-container input[type="email"],
+  .signup-container input[type="text"],
+  .signup-container input[type="number"],
   .signup-container input[type="password"] {
     font-size: 14px; /* Smaller input text size on mobile */
   }
