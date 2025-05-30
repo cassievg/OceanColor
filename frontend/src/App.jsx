@@ -23,25 +23,16 @@ import UpdateTicket from './pages/Customer/UpdateTicket/index';
 import Dashboard from './pages/Customer/Dashboard/index';
 
 import './App.css';
-// =======
-// >>>>>>> Stashed changes
+
 
 function App() {
     return (
         <CartProvider>
-            <Navbar />
-            <Routes>
-                {/* Public Routes */}
-                <Route path="/" element={<Profile />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                {/* <Route path="/shop" element={<Shop />} />
-                <Route path="/cart" element={<Cart />} /> */}
             <div className='app-container'>
                 <Navbar />
                 <Routes>
                     {/* Public Routes */}
-                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/" element={<Profile />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     {/* <Route path="/shop" element={<Shop />} />
@@ -72,6 +63,7 @@ function App() {
                 </Routes>
             </div>
         </CartProvider>
+        
     );
 }
 
