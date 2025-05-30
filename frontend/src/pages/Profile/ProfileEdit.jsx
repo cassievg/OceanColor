@@ -1,11 +1,11 @@
 import "./Profile.css";
 
 
-const Profile = () => {
+const ProfileEdit = () => {
     return (<>
         <div className="profile-container">
             <div>
-                <h1>Account</h1>
+                <h1>Edit Account</h1>
                 <p>pfp</p>
                 <div className="container text-center">
                     <div class="row mb-3">
@@ -40,12 +40,20 @@ const Profile = () => {
                             <input type="password" class="form-control"></input>
                         </div>
                     </div>
+                    <div class="row mb-3">
+                        <div class="col-4"> 
+                            <label for="inputPassword6" class="col-form-label">Confirm Password</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="password" class="form-control"></input>
+                        </div>
+                    </div>
                         <div class="row mb-3">
                             <div className="col-4">
-                                <button type="button" class="btn btn-danger logout">Log Out</button>
+                                <button type="button" class="btn btn-danger logout">Back</button>
                             </div>
                             <div className="col-8">
-                                <button type="button" class="btn btn-info edit">Edit</button>
+                                <button type="button" class="btn btn-info edit">Confirm</button>
                             </div>
                         </div>
                 </div>
@@ -55,4 +63,4 @@ const Profile = () => {
     )
 }
 
-export default Profile;
+export default ProfileEdit;

@@ -17,6 +17,7 @@ import PrivateRoute from './components/PrivateRoute';
 import { CartProvider } from './Context/CartContext';
 import Navbar from './components/NavBar/navbar';
 import TicketList from './pages/TicketList/index';
+import ProfileEdit from './pages/Profile/ProfileEdit';
 import ApproveTicket from './pages/Customer/ApproveTicket/index';
 import CustDashboard from './pages/Customer/CustDashboard/index';
 import UpdateTicket from './pages/Staff/UpdateTicket';
