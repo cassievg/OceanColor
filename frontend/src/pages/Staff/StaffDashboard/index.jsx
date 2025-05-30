@@ -11,7 +11,7 @@ const StaffDashboard = () => {
                 <hr3>total ticket</hr3>
             </div>
             <div className='dashboard-table'>
-                <table class="table">
+                <table className="table">
                     <tbody>
                         <tr>
                             <td rowSpan={2}>pie chart</td>
@@ -32,7 +32,7 @@ const StaffDashboard = () => {
                 Updated Tickets
             </div>
             <div className='ticket-table'>
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                         <th scope="col">ID</th>

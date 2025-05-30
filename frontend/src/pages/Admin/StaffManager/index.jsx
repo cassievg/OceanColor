@@ -8,17 +8,17 @@ const StaffManager = () => {
                 <h2>Staff Activity</h2>
             </div>
             <div className='staff-accordion'>
-                <div class="accordion" id="staff1">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="staffheading1">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                <div className="accordion" id="staff1">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="staffheading1">
+                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                             Staff 1
                         </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="staffheading1" data-bs-parent="#staff1">
-                        <div class="accordion-body">
+                        <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="staffheading1" data-bs-parent="#staff1">
+                        <div className="accordion-body">
                             <div className='dashboard-table'>
-                                <table class="table">
+                                <table className="table">
                                     <tbody>
                                         <tr>
                                             <td rowSpan={2}>pie chart</td>
@@ -39,7 +39,7 @@ const StaffManager = () => {
                                 Updated Tickets
                             </div>
                             <div className='ticket-table'>
-                                <table class="table">
+                                <table className="table">
                                     <thead>
                                         <tr>
                                         <th scope="col">ID</th>
