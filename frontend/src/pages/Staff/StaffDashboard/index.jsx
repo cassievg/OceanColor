@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-const Dashboard = () => {
+const StaffDashboard = () => {
     return (
         <div className='dashboard-container'>
             <div className='title'>
@@ -55,4 +55,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default StaffDashboard;

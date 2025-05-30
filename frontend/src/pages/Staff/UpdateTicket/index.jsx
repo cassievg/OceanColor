@@ -26,6 +26,12 @@ const UpdateTicket = () => {
                     </tbody>
                 </table>
             </div>
+            <div className='reply-text'>
+                <div class="mb-3">
+                    <label for="replybox" class="form-label">Reply</label>
+                    <textarea class="form-control" id="replybox" rows="3"></textarea>
+                </div>
+            </div>
             <div className='status-update'>
                 <select class="form-select" aria-label="Default select example">
                     <option selected>Sort By</option>
@@ -48,6 +54,11 @@ const UpdateTicket = () => {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className='update-buttons'>
+                <button>reply</button>
+                <button>reply & lock</button>
+                <button>cancel</button>
             </div>
         </div>
     )
