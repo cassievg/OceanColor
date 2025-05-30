@@ -16,12 +16,21 @@ import StaffManagement from './pages/Admin/StaffManagement';
 import PrivateRoute from './components/PrivateRoute';
 import { CartProvider } from './Context/CartContext';
 import Navbar from './components/NavBar/navbar';
+<<<<<<< Updated upstream
 import TicketList from './pages/TicketList/index';
 import ProfileEdit from './pages/Profile/ProfileEdit';
 import ApproveTicket from './pages/Customer/ApproveTicket/index';
 import CustDashboard from './pages/Customer/CustDashboard/index';
 import UpdateTicket from './pages/Staff/UpdateTicket';
 import StaffManager from './pages/Admin/StaffManager';
+=======
+import Profile from './pages/Profile/Profile';
+import ProfileEdit from './pages/Profile/ProfileEdit';
+// <<<<<<< Updated upstream
+import TicketList from './pages/Customer/TicketList/index';
+import UpdateTicket from './pages/Customer/UpdateTicket/index';
+import Dashboard from './pages/Customer/Dashboard/index';
+>>>>>>> Stashed changes
 
 import './App.css';
 
@@ -33,7 +42,11 @@ function App() {
                 <Navbar />
                 <Routes>
                     {/* Public Routes */}
+<<<<<<< Updated upstream
                     <Route path="/" element={<StaffManager />} />
+=======
+                    <Route path="/" element={<ProfileEdit />} />
+>>>>>>> Stashed changes
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     {/* <Route path="/shop" element={<Shop />} />
