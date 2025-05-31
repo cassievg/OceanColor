@@ -3,13 +3,50 @@
     padding: 5vh;
 }
 
+.status-update {
+    height: 5vh;
+}
+
+.status-button{
+    padding-top: 10px;
+}
+
+.status-option {
+    width: 33%;
+}
+
 .update-buttons {
-    display: flex;
+    padding-top: 10px;
 }
 
 .update-reply {
-    float: left;
+    background-color: #cc3366;
+    border: 2px #cc3366;
+    color: white;
+    padding: 7px 10px;
 }
-.update-cancel {
-    float: right;
+
+.update-status {
+    margin-left: 15px;
+    padding: 5px 10px;
+}
+
+.update-lock {
+    margin-left: 15px;
+    padding: 5px 10px;
+}
+
+
+.update-reply-lock {
+    margin-left: 10px;
+    background-color: #cc3366;
+    border: #cc3366;
+    color: white;
+    padding: 7px 10px;
+}
+
+.update-cancel{
+    margin-left: 10px;
+    background-color: white;
+    padding: 5px 10px;
 }

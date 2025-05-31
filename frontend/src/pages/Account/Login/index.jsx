@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../Context/AuthContext';
 
 import instance from '../../../libs/request';
-import './index';
+import './index.css';
 
 const Login = () => {
     const [userDetails, setUserDetails] = useState({});

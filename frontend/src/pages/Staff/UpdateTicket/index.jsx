@@ -20,10 +20,10 @@ const UpdateTicket = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td colSpan={3}>title</td>
+                            <td colSpan={3}>Title Ticket</td>
                         </tr>
                         <tr>
-                            <td colSpan={3}>desc</td>
+                            <td colSpan={3}>Ticket Description</td>
                         </tr>
                     </tbody>
                 </table>
@@ -35,16 +35,16 @@ const UpdateTicket = () => {
                 </div>
             </div>
             <div className='status-update'>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected value="status">Statuses</option>
+                <select className="form-select status-option" aria-label="Default select example">
+                    <option selected value="status" >Statuses</option>
                 </select>
-                <button>Update status</button>
-                <button>Lock</button>
+                <button className='update-status'>Update status</button>
+                <button className='update-lock'>Lock</button>
             </div>
-            <div className='update-buttons'>
-                <button className='btn btn-primary update-reply'>reply</button>
-                <button className='btn btn-primary update-reply-lock'>reply & lock</button>
-                <button className='btn btn-primary update-cancel'>cancel</button>
+            <div className='mb-3 update-buttons'>
+                <button className='update-reply'>Reply</button>
+                <button className='update-reply-lock'>Reply & Lock</button>
+                <button className='update-cancel'>Cancel</button>
             </div>
         </div>
     )

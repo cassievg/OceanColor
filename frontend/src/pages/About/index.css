@@ -7,12 +7,26 @@ body {
 }
 
 .about-container {
-    flex: 1;
-    padding: 5vh;
+  flex: 1;
 }
 
 .faq-section-title {
   margin-bottom: 20px;
+}
+
+.hero-content {
+  padding-left: 12vw;
+  padding-right: 12vw;
+}
+
+.text-content {
+  padding-left: 12vw;
+  padding-right: 12vw;
+}
+
+.value-content {
+  padding-left: 12vw;
+  padding-right: 12vw;
 }
 
 .faq-item {

@@ -60,12 +60,12 @@ const StaffManager = () => {
                                                     <td rowSpan={2}>pie chart</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>approved<br></br>{user.approved}</td>
-                                                    <td>disapproved<br></br>{user.disapproved}</td>
+                                                    <td className='status-approved'>Approved<br></br>{user.approved}</td>
+                                                    <td className='status-disapproved'>Disapproved<br></br>{user.disapproved}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>waiting<br></br>{user.waiting}</td>
-                                                    <td>in progress<br></br>{user.inprogress}</td>
+                                                    <td className='status-waiting'>Waiting<br></br>{user.waiting}</td>
+                                                    <td className='status-progress'>In progress<br></br>{user.inprogress}</td>
                                                 </tr>
                                             </tbody>
                                         </table>

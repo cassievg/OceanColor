@@ -9,33 +9,35 @@ const StaffDashboard = () => {
                     Dashboard
                 </h1>
             </div>
+            <div className='total-ticket'>
+                <hr3><b>Total ticket </b></hr3>
+                <hr3 className='ticket-count'>0</hr3>
+            </div>
+
             <div className='dashboard-table'>
                 <table className="table">
                     <tbody>
                         <tr>
-                            <td colSpan={4} className='total-ticket border-2 border-black'>
-                                <hr3>Total ticket: </hr3>
-                            </td>
+                            <td rowSpan={3} className=''>pie chart</td>
                         </tr>
-                        <tr>
-                            <td rowSpan={3} className='border-2 border-black'>pie chart</td>
+                        <tr className=''>
+                            <td colSpan={2} className='text-center status-approved'><b>Approved</b><br></br>0</td>
+                            <td colSpan={2} className='text-center status-waiting'><b>Waiting</b><br></br>0</td>
+                            <td colSpan={2} className='text-center status-unapproved'><b>Unapproved</b><br></br>0</td>
                         </tr>
-                        <tr className='border-2 border-black'>
-                            <td rowSpan={2} className='text-center border-2 border-black'>approved<br></br>0</td>
-                            <td className='text-center border-2 border-black'>waiting<br></br>0</td>
-                            <td className='text-center '>unapproved<br></br>0</td>
+                        <tr className=''>
+                            <td colSpan={3} className='text-center status-pending'><b>Pending</b><br></br>0</td>
+                            <td colSpan={3} className='text-center status-progress'><b>In progress</b><br></br>0</td>
                         </tr>
-                        <tr className='border-2 border-black'>
-                            <td className='text-center border-2 border-black'>pending<br></br>0</td>
-                            <td className='text-center'>in progress<br></br>0</td>
-                        </tr>
+                        <tr></tr>
+                        <tr></tr>
                     </tbody>
                 </table>
             </div>
             <div className='table-title'>
-                <h2>
+                <h3>
                     Updated Tickets
-                </h2>
+                </h3>
             </div>
             <div className='ticket-table'>
                 <table className="table">

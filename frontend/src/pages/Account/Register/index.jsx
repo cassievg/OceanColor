@@ -45,7 +45,7 @@ const Register = () => {
 					</div>
 					<div class="mb-3 phone">
 						<label for="phone" class="form-label">Phone Number</label>
-						<input class="form-control" type="text" aria-label="phone" id="phone" onChange={updateDetails}></input>
+						<input class="form-control" type="number" aria-label="phone" id="phone" onChange={updateDetails}></input>
 					</div>
 					<div class="mb-3 password">
 						<label for="password" class="form-label">Password</label>
