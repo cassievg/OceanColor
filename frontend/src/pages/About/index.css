@@ -2,16 +2,17 @@ body {
   overflow-x: hidden;
 }
 
+.about-page-container {
+  width: 100%;
+}
+
 .about-container {
-  margin-left: 250px;
   padding: 20px;
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  background-color: #fff0f5; /* Light pink background to match login/register */
+  color: #333; /* Light pink background to match login/register */
 }
 
 .hero {
-  background: #fce4ec;
   padding: 6rem 3rem;
   text-align: center;
 }
@@ -69,7 +70,6 @@ body {
 }
 
 .team-member {
-  background: #ffe6ee; /* Match register/login container pink */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 2rem;
@@ -91,10 +91,6 @@ body {
 .team-member p {
   font-size: 0.9rem;
   color: #777;
-}
-
-.alt-bg {
-  background-color: #fff0f5; /* Match site-wide background color */
 }
 
 .footer {
@@ -120,11 +116,9 @@ body {
 
 /* Light pink background */
 .contact-wrapper {
-  background-color: #ffe6ec;
   padding: 20px 40px;
   box-sizing: border-box;
   min-height: 100vh;
-  margin-left: 250px; /* ensure enough space for the sidebar */
 }
 
 .contact-header,
@@ -143,7 +137,6 @@ body {
 }
 
 .contact-form {
-  background-color: #ffffff;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
