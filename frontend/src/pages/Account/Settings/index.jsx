@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import './Settings.css';
+import './index.css';
+import { useNavigate } from 'react-router-dom';
 
 const Settings = () => {
 	const [name, setName] = useState('');
 	const [userDetails, setUserDetails] = useState({})
+	const navigate = useNavigate();
 
 	const updateDetails = (event) => {
 		const {
@@ -16,7 +18,6 @@ const Settings = () => {
 		}));
 	}
 
-	// put /user/:id
 	const updateUser = async () => {
 		await instance.put('/user/',
 			{
@@ -27,6 +28,20 @@ const Settings = () => {
 			}
 		)
 	}
+
+	const logout = async () => {
+        await instance.post('/auth/logout',
+            {
+                email:  userDetails.email,
+                password: userDetails.password
+            }
+        );
+
+        setProfile(null);
+        setIsAuthenticated(false);
+
+		navigate('/account/login');
+    }
 
 	return (
 		<div className="settings-page">
@@ -51,7 +66,8 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className='buttons'>
-					<button onClick={updateUser}>Sign Up</button>
+					<button onClick={updateUser}>Save</button>
+					<button onClick={logout}>Log out</button>
 				</div>
 			</div>
 		</div>

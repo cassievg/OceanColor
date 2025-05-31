@@ -1,7 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import cors from 'cors';
 import session from 'express-session';
 
 import ticketRoutes from './routes/tickets.js';
@@ -17,21 +16,20 @@ async function run() {
     await mongoose.connect(process.env.MONGO_URI);
 
     app.use(express.json());
-    app.use(cors());
     app.use(session({
         secret: 'secret',
-        resave: false,
+        resave: true,
         saveUninitialized: false,
+        cookie: {
+            secure: false,
+            httpOnly: false,
+        },
     }));
-
+    
     app.use((req, res, next) => {
-        if (req.session) {
-            console.log(req.session);
-        }
-        else {
-            console.log('no session');
-        }
-    })
+        console.log(req.session);
+        next();
+    });
 
     app.use('/api/ticket', ticketRoutes);
     app.use('/api/user', userRoutes);

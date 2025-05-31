@@ -1,11 +1,15 @@
 // src/pages/Account/Login.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../Context/AuthContext';
+
 import instance from '../../../libs/request';
 import './index';
 
 const Login = () => {
-    const [userDetails, setUserDetails] = useState({})
+    const [userDetails, setUserDetails] = useState({});
+
+    const { setIsAuthenticated, setProfile } = useAuth();
     const navigate = useNavigate();
 
     const updateDetails = (event) => {
@@ -20,12 +24,15 @@ const Login = () => {
     }
 
     const login = async () => {
-        await instance.post('/auth/login',
+        const response = await instance.post('/auth/login',
             {
                 email:  userDetails.email,
                 password: userDetails.password
             }
-        )
+        );
+
+        setProfile(response.data);
+        setIsAuthenticated(true);
     }
 
     return (
@@ -39,7 +46,7 @@ const Login = () => {
                     </div>
                     <div class="mb-3 password">
                         <label for="password" class="form-label">Password</label>
-                        <input class="form-control" type="text" aria-label="password" id="password" onChange={updateDetails}></input>
+                        <input class="form-control" type="password" aria-label="password" id="password" onChange={updateDetails}></input>
                     </div>
                 </div>
                 <div className='buttons'>

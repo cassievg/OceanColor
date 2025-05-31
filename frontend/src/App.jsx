@@ -9,7 +9,7 @@ import Cart from './pages/Cart';
 import Account from './pages/Account/Account';
 import Login from './pages/Account/Login/index';
 import Register from './pages/Account/Register/index';
-import Settings from './pages/Account/Settings';
+import Settings from './pages/Account/Settings/index';
 import Ticket from './pages/Customer/Ticket';
 import TicketManagement from './pages/Staff/TicketManagement';
 import StaffManagement from './pages/Admin/StaffManagement';
@@ -22,6 +22,7 @@ import CustDashboard from './pages/Customer/CustDashboard/index';
 import UpdateTicket from './pages/Staff/UpdateTicket';
 import StaffManager from './pages/Admin/StaffManager';
 import CreateTicket from './pages/Customer/CreateTicket';
+import Profile from './pages/Account/Profile/index'
 
 import './App.css';
 import StaffDashboard from './pages/Staff/StaffDashboard';
@@ -73,7 +74,7 @@ function App() {
                     <Route path="/tickets" element={<TicketList />}/>
                     
                     {/* Level 1 */}
-                    <Route path="/account" element={<Account />}/>
+                    <Route path="/account/profile" element={<Profile />}/>
                     <Route path="/account/settings" element={<Settings />}/>
                     {/* Cannot be accessed by Level 2, can be accessed by Level 3 */}
                     <Route path="/tickets/edit" element={<EditTicket />}/>
@@ -82,7 +83,7 @@ function App() {
                     <Route path="/customer/dashboard" element={<CustDashboard />}/>
 
                     {/* Level 0 */}
-                    <Route path="/" element={<Settings />}/>
+                    <Route path="/" element={<About />}/>
                     {/* Cannot be accessed by other levels */}
                     <Route path="/account">
                         <Route index element={<Account />} />

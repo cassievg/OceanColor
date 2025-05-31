@@ -10,11 +10,11 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ email: creds.email });
 
     if (user && user.password === creds.password) {
-        res.session = {
-            user
+        req.session.user = {
+            ...user
         };
-        console.log(res.session);
-        res.send('Logged in');
+
+        res.json(user);
     }
     else {
         res.send('Log in failed');

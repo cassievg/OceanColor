@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     try {
         let tickets;
 
-        if (res.session.user.level <= 1) {
+        if (req.session.user.level <= 1) {
             tickets = await Ticket.find();
         }
         else {
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
     const ticket = req.body;
 
     const newTicket = new Ticket({
-        creator: res.session.user.id,
+        creator: req.session.user._id,
         title: ticket.title,
         description: ticket.description
     });
