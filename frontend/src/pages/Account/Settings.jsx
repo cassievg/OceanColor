@@ -29,8 +29,8 @@ const Settings = () => {
 	}
 
 	return (
-		<div className="settings-page">
-			<div className="settings-container">
+		<div className="settings-container">
+			<div className="settings-page">
 				<h2 className="settings-title">Account Settings</h2>
 				<div className='form'>
 					<div class="mb-3 username">

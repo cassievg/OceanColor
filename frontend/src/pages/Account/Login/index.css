@@ -84,6 +84,10 @@
   border-color: #b32d5c;
 }
 
+.signup-button {
+  margin-top: 10px !important;
+}
+
 /* Text and Link */
 .login-text {
   margin-top: 20px;
@@ -106,6 +110,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {

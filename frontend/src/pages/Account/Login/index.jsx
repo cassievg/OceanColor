@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import instance from '../../../libs/request';
-import './index';
+import './index.css';
 
 const Login = () => {
     const [userDetails, setUserDetails] = useState({})
