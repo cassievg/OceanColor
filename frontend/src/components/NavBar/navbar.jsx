@@ -8,7 +8,8 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <Nav className="navbar-sidebar">
+      <div className='navbar-stick'>
+        <Nav className="navbar-sidebar">
         <div className="nav-items-top">
           <Nav.Item>
             <Nav.Link as={NavLink} to="/" className="nav-link brand-name">
@@ -51,6 +52,7 @@ const Navbar = () => {
           )}
         </div>
       </Nav>
+      </div>
     </div>
   );
 };

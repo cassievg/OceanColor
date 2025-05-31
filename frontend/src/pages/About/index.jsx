@@ -99,7 +99,6 @@ const About = () => {
         </div>
       </section>
           </div>
-
           <div className="contact-wrapper">
             <header className="contact-header">
               <h1 className="contact-title">Get in Touch with Ocean Color</h1>
