@@ -67,37 +67,6 @@ const About = () => {
           <li><strong>Sustainability</strong>: We're committed to eco-friendly practices and sustainable sourcing.</li>
         </ul>
       </section>
-
-      {/* Meet the Team */}
-      <section className="section">
-        <h2 className="section-title">Meet the Team</h2>
-        <div className="team-grid">
-          {[
-            {
-              name: "Mr Sukarno",
-              role: "Founder & CEO"
-            },
-            {
-              name: "Ms Khadija",
-              role: "Head of Operations"
-            },
-            {
-              name: "Ms Athena",
-              role: "Marketing Lead"
-            }
-          ].map((member, index) => (
-            <div className="team-member" key={index}>
-              <div className="team-member-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-                </svg>
-              </div>
-              <h3>{member.name}</h3>
-              <p>{member.role}</p>
-            </div>
-          ))}
-        </div>
-      </section>
           </div>
 
           <div className="contact-wrapper">
@@ -119,43 +88,6 @@ const About = () => {
                 </div>
               ))}
             </section>
-      
-            <section className="contact-content">
-              <form className="contact-form">
-                <div className="form-group">
-                  <label htmlFor="name">Your Name</label>
-                  <input id="name" type="text" placeholder="Your Name" className="form-input" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Your Email</label>
-                  <input id="email" type="email" placeholder="Your Email" className="form-input" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="branch">Select Branch</label>
-                  <select id="branch" className="form-input" required>
-                    <option value="">Select Branch</option>
-                    <option value="jakarta">Jakarta - Jln. Jembatan Besi Raya No. 209</option>
-                    <option value="surabaya">Surabaya - Jln. Raya Darmo No. 100</option>
-                    <option value="bandung">Bandung - Jln. Asia Afrika No. 88</option>
-                  </select>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message">Your Message</label>
-                  <textarea id="message" placeholder="Your Message" rows="5" className="form-textarea" required></textarea>
-                </div>
-                <button type="submit" className="submit-button">Send Message</button>
-              </form>
-            </section>
-      
-            <section className="map-container">
-              <iframe
-                title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.3105549057573!2d106.8456!3d-6.2088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4e6e321ab%3A0x6e7d6e6e6e6e6e6e!2sJakarta!5e0!3m2!1sen!2sid!4v1715240000000"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
-            </section>
-                  {/* Footer */}
                 <footer className="footer">
                   <p>© 2025 Ocean Color. All rights reserved.</p>
                   <Link to="/" className="btn-primary">Back to Home</Link>

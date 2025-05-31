@@ -17,7 +17,7 @@ router.get('/:id', async (req, res) => {
     const { id } = req.params;
     
     try {
-        const users = await User.find(id);
+        const users = await User.find({ id });
         res.json(users);
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -34,6 +34,23 @@ router.post('/', async (req, res) => {
     res.status(201).json(savedUser);
     } catch (err) {
     res.status(400).json({ message: err.message });
+    }
+});
+
+
+router.put('/:id', async (req, res) => {
+    const { id } = req.params;
+    const { title, description, status } = req.body;
+
+    try {
+        const updatedUser = await User.findByIdAndUpdate(
+        id,
+        { title, description, status },
+        { new: true }
+        );
+        res.json(updatedUser);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
     }
 });
 

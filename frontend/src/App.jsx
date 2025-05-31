@@ -70,22 +70,25 @@ function App() {
                     {/* Level 2 */}
                     <Route path="/staff/dashboard" element={<StaffDashboard />}/>
                     <Route path="/tickets/update" element={<UpdateTicket />}/>
-
+                    <Route path="/tickets" element={<TicketList />}/>
+                    
                     {/* Level 1 */}
                     <Route path="/account" element={<Account />}/>
                     <Route path="/account/settings" element={<Settings />}/>
-                    <Route path="/tickets" element={<TicketList />}/>
                     {/* Cannot be accessed by Level 2, can be accessed by Level 3 */}
                     <Route path="/tickets/edit" element={<EditTicket />}/>
-                    <Route path="/tickets/create" element={<CustDashboard />}/>
+                    <Route path="/tickets/create" element={<CreateTicket />}/>
                     {/* Cannot be accessed by other levels */}
                     <Route path="/customer/dashboard" element={<CustDashboard />}/>
 
                     {/* Level 0 */}
-                    <Route path="/" element={<About />}/>
+                    <Route path="/" element={<CustDashboard />}/>
                     {/* Cannot be accessed by other levels */}
-                    <Route path="/login" element={<Login />}/>
-                    <Route path="/register" element={<Register />}/>
+                    <Route path="/account">
+                        <Route index element={<Account />} />
+                        <Route path="login" element={<Login />} />
+                        <Route path="register" element={<Register />} />
+                    </Route>
                 </Routes>
             </div>
         </CartProvider>

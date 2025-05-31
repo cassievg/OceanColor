@@ -1,14 +1,14 @@
 import React from 'react';
 import './index.css';
 
-const ApproveTicket = () => {
+const EditTicket = () => {
     return (
         <div className='updateticket-container'>
             <div className='title'>
                 Update Ticket
             </div>
             <div className='update-table'>
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
@@ -30,7 +30,7 @@ const ApproveTicket = () => {
                 <button>Reply</button>
             </div>
             <div className='replies'>
-                <table class="table">
+                <table className="table">
                     <tbody>
                         <tr>
                             <td>name</td>
@@ -49,4 +49,4 @@ const ApproveTicket = () => {
     )
 }
 
-export default ApproveTicket;
+export default EditTicket;

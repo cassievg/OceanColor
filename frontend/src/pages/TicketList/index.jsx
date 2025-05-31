@@ -1,32 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './index.css';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
-const instance = axios.create({
-    baseURL: 'http://localhost:5000/api/',
-    timeout: 60000,
-});
-
-async function getAllTickets() {
-    return await instance.get('/ticket/');
-}
-
-async function getTicket(id) {
-    return await instance.get('/ticket/' + id);
-}
+import instance from '../../libs/request';
 
 const TicketList = () => {
     const navigate = useNavigate();
     const [tickets, setTickets] = useState([]);
+    const [selectedSort, setSelectedSort] = useState(null);
+    const [search, setSearch] = useState(null);
+
+    const searchTickets = (event) => {
+        const {
+            target
+        } = event;
+
+        setSearch(target.value);
+    }
+
+    const filteredTickets = useMemo(() => {
+        let result = [...tickets];
+
+        if (selectedSort !== null) {
+            result.sort((a, b) => {
+                if (a[selectedSort] > b[selectedSort]) {
+                    return 1;
+                }
+                else if (a[selectedSort] < b[selectedSort]) {
+                    return -1;
+                }
+                else {
+                    return 0;
+                }
+            });
+        }
+        
+        if (search !== null) {
+            return result.filter((ticket) => (ticket.title.includes(search)));
+        }
+        else {
+            return result;
+        }
+
+    }, [tickets, selectedSort, search]);
+
+    const selectSort = (event) => {
+        const {
+            target
+        } = event;
+
+        setSelectedSort(target.value);
+    };
 
     useEffect(() => {
         const initTickets = async () => {
-            const ticketRes = await getAllTickets();
+            const ticketRes = await instance.get('/ticket/');
             const ticketData = [...ticketRes.data];
             const mappedTicket = ticketData.map((item) => {
                 return {
                     id: item._id,
+                    creator: item.creator,
                     title: item.title,
                     description: item.description,
                     status: item.status,
@@ -48,11 +80,11 @@ const TicketList = () => {
                 <h2>Tickets</h2>
             </div>
             <div className='search'>
-                <input className="searchbar" type="text" placeholder="Search..." aria-label="searchbar"></input>
-                <select className="form-select" aria-label="Default select example">
+                <input className="searchbar" type="text" placeholder="Search..." aria-label="searchbar" onChange={searchTickets}></input>
+                <select className="form-select" aria-label="Default select example" onChange={selectSort}>
                     <option selected>Sort By</option>
-                    <option value="create-date">Recently created</option>
-                    <option value="update-date">Recently updated</option>
+                    <option value="datecreated">Recently created</option>
+                    <option value="lastupdated">Recently updated</option>
                     <option value="title">Title</option>
                     <option value="status">Status</option>
                 </select>
@@ -69,7 +101,7 @@ const TicketList = () => {
                     </thead>
                     <tbody>
                         {
-                            tickets.map((ticket) => (
+                            filteredTickets.map((ticket) => (
                                 <tr key={ticket.id} onDoubleClick={() => { navigate('/tickets/edit') }}>
                                     <th scope="row">
                                         {ticket.id}

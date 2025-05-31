@@ -15,7 +15,6 @@ const Account = () => {
   return (
     <div className="account-page">
       <div className="account-box">
-        <h1 className="account-title">Welcome to Ocean Color</h1>
         <p className="account-text">Please log in or create an account to get started.</p>
         <div className="account-buttons">
           <Link to="/account/Login" className="btn btn-primary w-100 mb-3">Login</Link>
