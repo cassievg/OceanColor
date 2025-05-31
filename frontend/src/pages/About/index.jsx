@@ -61,12 +61,16 @@ const About = () => {
       {/* Our Values */}
       <section className="section alt-bg">
         <h2 className="section-title">Our Values</h2>
-        <ul className="values-list">
+        <div className='value-content'>
+          <ul className="values-list">
+          {/* Remake this list into grids instead (continued later) */}
           <li><strong>Quality</strong>: We only offer the best products that stand the test of time.</li>
           <li><strong>Innovation</strong>: Always looking for the latest trends and techniques to improve our offerings.</li>
           <li><strong>Customer Satisfaction</strong>: Your experience is our top priority, and we're here to support you at every step.</li>
           <li><strong>Sustainability</strong>: We're committed to eco-friendly practices and sustainable sourcing.</li>
         </ul>
+        </div>
+
       </section>
           </div>
           <div className="contact-wrapper">
