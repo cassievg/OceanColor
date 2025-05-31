@@ -37,13 +37,6 @@ const CreateTicket = () => {
                     <label for="creator" class="form-label">Name</label>
                     <input class="form-control" type="text" aria-label="creator" id="creator" onChange={updateDetails}></input>
                 </div>
-                <div class="mb-3 branch">
-                    <label for="branch">Branches</label>
-                        <select id="branches" name="branches">
-                        <option value="tambora">Tambora</option>
-                        <option value="cengkareng">Cengkareng</option>
-                        </select>
-                </div>
                 <div class="mb-3 title">
                     <label for="title" class="form-label">Issue Title</label>
                     <input class="form-control" type="text" aria-label="title" id="title" onChange={updateDetails}></input>
