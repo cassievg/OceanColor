@@ -33,12 +33,14 @@ const Login = () => {
 
         setProfile(response.data);
         setIsAuthenticated(true);
+
+        navigate('../../tickets');
     }
 
     return (
-        <div className="signup-page">
-            <div className="signup-container">
-                <h2 className="signup-title">Sign Up</h2>
+        <div className="login-page">
+            <div className="login-container">
+                <h2 className="login-title">Log In</h2>
                 <div className='form'>
                     <div class="mb-3 email">
                         <label for="email" class="form-label">Email</label>
@@ -52,8 +54,8 @@ const Login = () => {
                 <div className='buttons'>
                     <button onClick={login}>Log In</button>
                 </div>
-                <div className='signup-instead'>
-                    <button className="signup-button" onClick={ () => navigate('/account/register') }>Dont have an account? Sign up now!</button>
+                <div className='login-instead'>
+                    <button className="login-button" onClick={ () => navigate('/account/register') }>Dont have an account? Sign up now!</button>
                 </div>
             </div>
         </div>

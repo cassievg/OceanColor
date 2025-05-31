@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth } from '../../Context/AuthContext';
 import { Navigate, Link } from 'react-router-dom';
+import instance from '../../libs/request';
 import './Account.css';
 
 const Account = () => {
@@ -24,7 +25,7 @@ const Account = () => {
 						{
 							isAuthenticated &&
 							<>
-								<Link to="/account/login" className="btn btn-primary w-100 mb-3">Profile</Link>
+								<Link to="/account/profile" className="btn btn-primary w-100 mb-3">Profile</Link>
 								<Link to="/account/settings" className="btn btn-primary w-100 mb-3">Settings</Link>
 							</>
 						}

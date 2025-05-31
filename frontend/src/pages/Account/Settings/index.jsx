@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
-import './index.css';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../Context/AuthContext';
+
+import instance from '../../../libs/request';
+import './index.css';
 
 const Settings = () => {
-	const [name, setName] = useState('');
-	const [userDetails, setUserDetails] = useState({})
-	const navigate = useNavigate();
+	// const [name, setName] = useState('');
+	const [userDetails, setUserDetails] = useState({});
 
 	const updateDetails = (event) => {
 		const {
@@ -28,20 +30,6 @@ const Settings = () => {
 			}
 		)
 	}
-
-	const logout = async () => {
-        await instance.post('/auth/logout',
-            {
-                email:  userDetails.email,
-                password: userDetails.password
-            }
-        );
-
-        setProfile(null);
-        setIsAuthenticated(false);
-
-		navigate('/account/login');
-    }
 
 	return (
 		<div className="settings-container">
@@ -67,7 +55,6 @@ const Settings = () => {
 				</div>
 				<div className='buttons'>
 					<button onClick={updateUser}>Save</button>
-					<button onClick={logout}>Log out</button>
 				</div>
 			</div>
 		</div>

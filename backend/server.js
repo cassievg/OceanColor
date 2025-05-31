@@ -25,11 +25,6 @@ async function run() {
             httpOnly: false,
         },
     }));
-    
-    app.use((req, res, next) => {
-        console.log(req.session);
-        next();
-    });
 
     app.use('/api/ticket', ticketRoutes);
     app.use('/api/user', userRoutes);

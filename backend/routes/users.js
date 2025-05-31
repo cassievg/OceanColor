@@ -40,12 +40,12 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     const { id } = req.params;
-    const { title, description, status } = req.body;
+    const { username, email, phone, password, level } = req.body;
 
     try {
         const updatedUser = await User.findByIdAndUpdate(
         id,
-        { title, description, status },
+        { username, email, phone, password, level },
         { new: true }
         );
         res.json(updatedUser);

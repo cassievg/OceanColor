@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import instance from '../../../libs/request';
 import './index.css';
 
 const EditTicket = () => {
+    const [tickets, setTickets] = useState([]);
+    const [showBox, setShowBox] = useState(false);
+    const [reply, setReply] = useState(null);
+
+    const showReplybox = () => {
+        setShowBox((prevShowBox) => !prevShowBox);
+    }
+
+    const updateReply = (event) => {
+        const {
+            target
+        } = event;
+
+        setReply((prevReply) => ({
+            ...prevReply,
+            [target.id]: target.value,
+        }));
+    }
+
     return (
         <div className='updateticket-container'>
             <div className='title'>
@@ -27,8 +47,19 @@ const EditTicket = () => {
                 </table>
             </div>
             <div className='reply-button'>
-                <button type="button" className="btn btn-primary ticket-reply">Reply</button>
+                <button type="button" className="btn btn-primary ticket-reply" onClick={showReplybox}>Reply</button>
             </div>
+
+            {
+                showBox &&
+                <>
+                    <div class="mb-3 description">
+                        <label for="description" class="form-label">Reply</label>
+                        <textarea class="form-control" rows="3" id="description" onChange={updateReply}></textarea>
+                    </div>
+                    <button>Submit Reply</button>
+                </>
+            }
 
             <div className='replies'>
                 <table className="table">
@@ -43,8 +74,7 @@ const EditTicket = () => {
                 </table>
             </div>
             <div className='approval-buttons'>
-                <button type="button" className="btn btn-primary ticket-disapprove">Disapprove</button>
-                <button type="button" className="btn btn-primary ticket-approve">Approve</button>
+                <button type="button" className="btn btn-primary ticket-disapprove">Close</button>
             </div>
         </div>
     )

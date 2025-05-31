@@ -12,10 +12,8 @@ return (
 		<div className='navbar-stick'>
 			<Nav className="navbar-sidebar">
 				<div className="nav-items-top">
-				<Nav.Item>
-					<Nav.Link as={NavLink} to="/" className="nav-link brand-name">
+				<Nav.Item className="brand-name">
 					Ocean Color
-					</Nav.Link>
 				</Nav.Item>
 				<Nav.Item>
 					<Nav.Link as={NavLink} to="/" className="nav-link">About Us</Nav.Link>

@@ -11,13 +11,21 @@ router.post('/login', async (req, res) => {
 
     if (user && user.password === creds.password) {
         req.session.user = {
-            ...user
+            _id: user._id,
+            username: user.username,
+            email: user.email,
+            phone: user.phone,
+            password: user.password,
+            level: user.level,
+            closed: user.closed,
+            progress: user.progress
         };
 
         res.json(user);
     }
     else {
-        res.send('Log in failed');
+        console.error(err)
+        res.status(400).send('User does not exist');
     }
 });
 

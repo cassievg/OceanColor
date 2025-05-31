@@ -48,6 +48,7 @@
   border-radius: 25px;
   text-decoration: none;
   font-weight: 500;
+  padding-top: 1vh;
 }
 
 .btn-secondary:hover {
@@ -116,4 +117,8 @@
   padding: 1.5rem 0;
   color: #333;
   margin-top: 3rem;
+}
+
+.product-card {
+  align-items: center; /* Align vertical */
 }

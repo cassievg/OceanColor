@@ -1,4 +1,6 @@
 import express from 'express';
+import mongoose from 'mongoose';
+
 import Ticket from '../models/ticket.js';
 
 const router = express.Router();
@@ -7,11 +9,13 @@ router.get('/', async (req, res) => {
     try {
         let tickets;
 
+        console.log(req.session.user)
+
         if (req.session.user.level <= 1) {
-            tickets = await Ticket.find();
+            tickets = await Ticket.find({ creator: new mongoose.Types.ObjectId(req.session.user._id) });
         }
         else {
-            tickets = await Ticket.find();
+            tickets = await Ticket.find().exec();
         }
 
         res.json(tickets);
@@ -37,7 +41,7 @@ router.post('/', async (req, res) => {
     const ticket = req.body;
 
     const newTicket = new Ticket({
-        creator: req.session.user._id,
+        creator: new mongoose.Types.ObjectId(req.session.user._id),
         title: ticket.title,
         description: ticket.description
     });

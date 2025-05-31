@@ -13,7 +13,6 @@ const TicketSchema = new mongoose.Schema({
   status: { type: String, required: false, default: "pending" },
   responses: [ReplySchema],
   datecreated: { type: Date, required: false, default: Date.now },
-  locked: { type: Boolean, required: false, default: false},
 });
 
 export default mongoose.model('Ticket', TicketSchema);
