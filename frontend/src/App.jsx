@@ -7,8 +7,8 @@ import Contact from './pages/Contact';
 import Shop from './pages/shop';
 import Cart from './pages/Cart';
 import Account from './pages/Account/Account';
-import Login from './pages/Account/Login';
-import Register from './pages/Account/Register';
+import Login from './pages/Account/Login/index';
+import Register from './pages/Account/Register/index';
 import Settings from './pages/Account/Settings';
 import Ticket from './pages/Customer/Ticket';
 import TicketManagement from './pages/Staff/TicketManagement';
@@ -82,7 +82,7 @@ function App() {
                     <Route path="/customer/dashboard" element={<CustDashboard />}/>
 
                     {/* Level 0 */}
-                    <Route path="/" element={<CustDashboard />}/>
+                    <Route path="/" element={<Settings />}/>
                     {/* Cannot be accessed by other levels */}
                     <Route path="/account">
                         <Route index element={<Account />} />

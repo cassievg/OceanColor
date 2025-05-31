@@ -5,7 +5,15 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
-        const tickets = await Ticket.find();
+        let tickets;
+
+        if (res.session.user.level <= 1) {
+            tickets = await Ticket.find();
+        }
+        else {
+            tickets = await Ticket.find();
+        }
+
         res.json(tickets);
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -27,7 +35,12 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const ticket = req.body;
-    const newTicket = new Ticket({ ...ticket });
+
+    const newTicket = new Ticket({
+        creator: res.session.user.id,
+        title: ticket.title,
+        description: ticket.description
+    });
 
     try {
     const savedTicket = await newTicket.save();

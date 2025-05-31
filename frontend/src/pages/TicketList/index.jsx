@@ -63,7 +63,6 @@ const TicketList = () => {
                     description: item.description,
                     status: item.status,
                     datecreated: item.datecreated,
-                    lastupdated: item.lastupdated,
                     locked: item.locked,
                 }
             });
@@ -107,8 +106,7 @@ const TicketList = () => {
                                         {ticket.id}
                                     </th>
                                     <td>
-                                        {ticket.title}<br></br>
-                                        {ticket.description}
+                                        {ticket.title}
                                     </td>
                                     <td>
                                         {ticket.datecreated}

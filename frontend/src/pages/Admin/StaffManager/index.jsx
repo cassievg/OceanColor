@@ -21,7 +21,6 @@ const StaffManager = () => {
                     username: item.username,
                     email: item.email,
                     phone: item.phone,
-                    pfp: item.pfp,
                     password: item.password,
                     level: item.level,
                     approved: item.approved,

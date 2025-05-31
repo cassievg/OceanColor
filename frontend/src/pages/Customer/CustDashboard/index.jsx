@@ -70,7 +70,6 @@ const CustDashboard = () => {
                     description: item.description,
                     status: item.status,
                     datecreated: item.datecreated,
-                    lastupdated: item.lastupdated,
                     locked: item.locked,
                 }
             });

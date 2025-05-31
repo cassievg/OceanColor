@@ -20,7 +20,6 @@ const CreateTicket = () => {
     const createTicket = async () => {
         await instance.post('/ticket/',
             {
-                creator:  ticketDetails.creator,
                 title: ticketDetails.title,
                 description: ticketDetails.description
             }
@@ -33,10 +32,6 @@ const CreateTicket = () => {
                 <h2>Create Ticket</h2>
             </div>
             <div className='form'>
-                <div class="mb-3 creator">
-                    <label for="creator" class="form-label">Name</label>
-                    <input class="form-control" type="text" aria-label="creator" id="creator" onChange={updateDetails}></input>
-                </div>
                 <div class="mb-3 title">
                     <label for="title" class="form-label">Issue Title</label>
                     <input class="form-control" type="text" aria-label="title" id="title" onChange={updateDetails}></input>
@@ -45,11 +40,9 @@ const CreateTicket = () => {
                     <label for="description" class="form-label">Description</label>
                     <textarea class="form-control" rows="3" id="description" onChange={updateDetails}></textarea>
                 </div>
-                <button type="button" className="btn btn-primary ticket-submit">Submit</button>
             </div>
             <div className='buttons'>
                 <button onClick={createTicket}>submit</button>
-                <button>cancel</button>
             </div>
         </div>
     )

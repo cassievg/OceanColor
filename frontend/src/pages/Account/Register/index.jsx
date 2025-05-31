@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import './Settings.css';
+import { useNavigate } from 'react-router-dom';
+import instance from '../../../libs/request';
+import './index.css';
 
-const Settings = () => {
-	const [name, setName] = useState('');
+
+const Register = () => {
+    const [name, setName] = useState('');
 	const [userDetails, setUserDetails] = useState({})
 
 	const updateDetails = (event) => {
@@ -16,9 +19,8 @@ const Settings = () => {
 		}));
 	}
 
-	// put /user/:id
-	const updateUser = async () => {
-		await instance.put('/user/',
+	const createUser = async () => {
+		await instance.post('/user/',
 			{
 				username:  userDetails.username,
 				email: userDetails.email,
@@ -28,10 +30,10 @@ const Settings = () => {
 		)
 	}
 
-	return (
-		<div className="settings-page">
-			<div className="settings-container">
-				<h2 className="settings-title">Account Settings</h2>
+    return (
+        <div className="signup-page">
+            <div className="signup-container">
+                <h2 className="signup-title">Sign Up</h2>
 				<div className='form'>
 					<div class="mb-3 username">
 						<label for="username" class="form-label">Name</label>
@@ -51,11 +53,11 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className='buttons'>
-					<button onClick={updateUser}>Sign Up</button>
+					<button onClick={createUser}>Sign Up</button>
 				</div>
-			</div>
-		</div>
-	);
+            </div>
+        </div>
+    );
 };
 
-export default Settings;
+export default Register;
