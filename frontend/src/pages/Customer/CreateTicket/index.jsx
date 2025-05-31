@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import './index.css';
 
 const CreateTicket = () => {
@@ -12,6 +11,13 @@ const CreateTicket = () => {
                     <label for="name" class="form-label">Name</label>
                     <input class="form-control" type="text" ria-label="name"></input>
                 </div>
+                <div class="mb-3 branch">
+                    <label for="branch">Branches</label>
+                        <select id="branches" name="branches">
+                        <option value="tambora">Tambora</option>
+                        <option value="cengkareng">Cengkareng</option>
+                        </select>
+                </div>
                 <div class="mb-3 title">
                     <label for="title" class="form-label">Issue Title</label>
                     <input class="form-control" type="text" aria-label="title"></input>
@@ -20,6 +26,7 @@ const CreateTicket = () => {
                     <label for="desc" class="form-label">Description</label>
                     <textarea class="form-control" id="desc" rows="3"></textarea>
                 </div>
+                <button type="button" className="btn btn-primary ticket-submit">Submit</button>
             </div>
         </div>
     )

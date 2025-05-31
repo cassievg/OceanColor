@@ -6,3 +6,11 @@
 .status-update {
     display: flex;
 }
+
+.ticket-disapprove {
+    float: left;
+}
+
+.ticket-approve {
+    float: right;
+}

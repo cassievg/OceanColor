@@ -77,12 +77,12 @@ function App() {
                     <Route path="/tickets" element={<TicketList />}/>
                     {/* Cannot be accessed by Level 2, can be accessed by Level 3 */}
                     <Route path="/tickets/edit" element={<EditTicket />}/>
-                    <Route path="/tickets/create" element={<CustDashboard />}/>
+                    <Route path="/tickets/create" element={<CreateTicket />}/>
                     {/* Cannot be accessed by other levels */}
                     <Route path="/customer/dashboard" element={<CustDashboard />}/>
 
                     {/* Level 0 */}
-                    <Route path="/" element={<About />}/>
+                    <Route path="/" element={<TicketList />}/>
                     {/* Cannot be accessed by other levels */}
                     <Route path="/login" element={<Login />}/>
                     <Route path="/register" element={<Register />}/>

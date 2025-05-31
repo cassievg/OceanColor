@@ -50,8 +50,7 @@ const TicketList = () => {
             <div className='search'>
                 <input className="searchbar" type="text" placeholder="Search..." aria-label="searchbar"></input>
                 <select className="form-select" aria-label="Default select example">
-                    <option selected>Sort By</option>
-                    <option value="create-date">Recently created</option>
+                    <option selected value="create-date">Recently created</option>
                     <option value="update-date">Recently updated</option>
                     <option value="title">Title</option>
                     <option value="status">Status</option>
@@ -61,10 +60,10 @@ const TicketList = () => {
                 <table className="table">
                     <thead>
                         <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Issue</th>
-                        <th scope="col">Submit Date</th>
-                        <th scope="col">Status</th>
+                        <th scope="col" className='center-text'>ID</th>
+                        <th scope="col" className='center-text'>Issue</th>
+                        <th scope="col" className='center-text'>Submit Date</th>
+                        <th scope="col" className='center-text'>Status</th>
                         </tr>
                     </thead>
                     <tbody>
