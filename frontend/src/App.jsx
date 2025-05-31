@@ -82,7 +82,7 @@ function App() {
                     <Route path="/customer/dashboard" element={<CustDashboard />}/>
 
                     {/* Level 0 */}
-                    <Route path="/" element={<About />}/>
+                    <Route path="/" element={<StaffManager />}/>
                     {/* Cannot be accessed by other levels */}
                     <Route path="/login" element={<Login />}/>
                     <Route path="/register" element={<Register />}/>

@@ -5,37 +5,37 @@ const Dashboard = () => {
     return (
         <div className='dashboard-container'>
             <div className='title text-center'>
-                <h1>
+                <h2>
                     Dashboard
-                </h1>
+                </h2>
                 
             </div>
             <div className='status-tables'>
-                <table className="table table-bordered border-black">
+                <table className="table table-bordered">
                     <tbody>
-                        <tr className='table-secondary'>
-                            <td>icon</td>
-                            <td>pending</td>
-                            <td className='text-center'>0</td>
+                        <tr className='table-secondary border'>
+                            <td className='border-2 border-black'>icon</td>
+                            <td className='border-2 border-black'>pending</td>
+                            <td className='text-center border-2 border-black'>0</td>
                         </tr>
-                        <tr className='table-warning'>
-                            <td>icon</td>
-                            <td>in progress</td>
-                            <td className='text-center'>0</td>
+                        <tr className='table-warning border border-2 border-black'>
+                            <td className='border-2 border-black'>icon</td>
+                            <td className='border-2 border-black'>in progress</td>
+                            <td className='text-center border-2 border-black'>0</td>
                         </tr>
                     </tbody>
                 </table>
-                <table class="table table-bordered border-black">
+                <table class="table table-bordered">
                     <tbody>
-                        <tr className='table-danger'>
-                            <td>icon</td>
-                            <td>waiting</td>
-                            <td className='text-center'>0</td>
+                        <tr className='table-danger border border-2 border-black'>
+                            <td className='border-2 border-black'>icon</td>
+                            <td className='border-2 border-black'>waiting</td>
+                            <td className='text-center border-2 border-black'>0</td>
                         </tr>
-                        <tr className='table-success'>
-                            <td>icon</td>
-                            <td>approved</td>
-                            <td className='text-center'>0</td>
+                        <tr className='table-success border border-2 border-black'>
+                            <td className='border-2 border-black'>icon</td>
+                            <td className='border-2 border-black'>approved</td>
+                            <td className='text-center border-2 border-black'>0</td>
                         </tr>
                     </tbody>
                 </table>
@@ -50,7 +50,7 @@ const Dashboard = () => {
                     <thead>
                         <tr>
                         <th scope="col" className='text-center'>ID</th>
-                        <th scope="col" className='text-center'>Issue</th>
+                        <th scope="col">Issue</th>
                         <th scope="col" className='text-center'>Submit Date</th>
                         <th scope="col" className='text-center'>Status</th>
                         </tr>

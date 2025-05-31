@@ -22,20 +22,20 @@ const StaffManager = () => {
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                            <td colSpan={4} className='total-ticket'>
+                                            <td colSpan={4} className='total-ticket border-2 border-black'>
                                                 <hr3>Total ticket: </hr3>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td rowSpan={3}>pie chart</td>
+                                            <td rowSpan={3} className='border-2 border-black'>pie chart</td>
                                         </tr>
-                                        <tr>
-                                            <td rowSpan={2} className='text-center'>approved<br></br>0</td>
-                                            <td className='text-center'>waiting<br></br>0</td>
-                                            <td className='text-center'>unapproved<br></br>0</td>
+                                        <tr className='border-2 border-black'>
+                                            <td rowSpan={2} className='text-center border-2 border-black'>approved<br></br>0</td>
+                                            <td className='text-center border-2 border-black'>waiting<br></br>0</td>
+                                            <td className='text-center '>unapproved<br></br>0</td>
                                         </tr>
-                                        <tr>
-                                            <td className='text-center'>pending<br></br>0</td>
+                                        <tr className='border-2 border-black'>
+                                            <td className='text-center border-2 border-black'>pending<br></br>0</td>
                                             <td className='text-center'>in progress<br></br>0</td>
                                         </tr>
                                     </tbody>
@@ -83,20 +83,20 @@ const StaffManager = () => {
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                            <td colSpan={4} className='total-ticket'>
+                                            <td colSpan={4} className='total-ticket border-2 border-black'>
                                                 <hr3>Total ticket: </hr3>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td rowSpan={3}>pie chart</td>
+                                            <td rowSpan={3} className='border-2 border-black'>pie chart</td>
                                         </tr>
-                                        <tr>
-                                            <td rowSpan={2} className='text-center'>approved<br></br>0</td>
-                                            <td className='text-center'>waiting<br></br>0</td>
-                                            <td className='text-center'>unapproved<br></br>0</td>
+                                        <tr className='border-2 border-black'>
+                                            <td rowSpan={2} className='text-center border-2 border-black'>approved<br></br>0</td>
+                                            <td className='text-center border-2 border-black'>waiting<br></br>0</td>
+                                            <td className='text-center '>unapproved<br></br>0</td>
                                         </tr>
-                                        <tr>
-                                            <td className='text-center'>pending<br></br>0</td>
+                                        <tr className='border-2 border-black'>
+                                            <td className='text-center border-2 border-black'>pending<br></br>0</td>
                                             <td className='text-center'>in progress<br></br>0</td>
                                         </tr>
                                     </tbody>
