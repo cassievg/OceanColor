@@ -22,16 +22,21 @@ const StaffManager = () => {
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                            <td rowSpan={2}>pie chart</td>
+                                            <td colSpan={4} className='total-ticket'>
+                                                <hr3>Total ticket: </hr3>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>approved<br></br>0</td>
-                                            <td>waiting<br></br>0</td>
-                                            <td>unapproved<br></br>0</td>
+                                            <td rowSpan={3}>pie chart</td>
                                         </tr>
                                         <tr>
-                                            <td>pending<br></br>0</td>
-                                            <td>in progress<br></br>0</td>
+                                            <td rowSpan={2} className='text-center'>approved<br></br>0</td>
+                                            <td className='text-center'>waiting<br></br>0</td>
+                                            <td className='text-center'>unapproved<br></br>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td className='text-center'>pending<br></br>0</td>
+                                            <td className='text-center'>in progress<br></br>0</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -78,16 +83,21 @@ const StaffManager = () => {
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                            <td rowSpan={2}>pie chart</td>
+                                            <td colSpan={4} className='total-ticket'>
+                                                <hr3>Total ticket: </hr3>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>approved<br></br>0</td>
-                                            <td>waiting<br></br>0</td>
-                                            <td>unapproved<br></br>0</td>
+                                            <td rowSpan={3}>pie chart</td>
                                         </tr>
                                         <tr>
-                                            <td>pending<br></br>0</td>
-                                            <td>in progress<br></br>0</td>
+                                            <td rowSpan={2} className='text-center'>approved<br></br>0</td>
+                                            <td className='text-center'>waiting<br></br>0</td>
+                                            <td className='text-center'>unapproved<br></br>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td className='text-center'>pending<br></br>0</td>
+                                            <td className='text-center'>in progress<br></br>0</td>
                                         </tr>
                                     </tbody>
                                 </table>

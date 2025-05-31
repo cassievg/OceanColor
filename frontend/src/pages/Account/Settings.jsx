@@ -23,6 +23,11 @@ const Settings = () => {
           <input type="password" id="password" className="form-control" placeholder="Enter new password" />
         </div>
 
+        <div className="form-group">
+          <label htmlFor="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" className="form-control" placeholder="Enter new password again" />
+        </div>
+
         <button type="submit" className="btn btn-primary w-100">Save Changes</button>
       </form>
     </div>

@@ -6,3 +6,10 @@
 .update-buttons {
     display: flex;
 }
+
+.update-reply {
+    float: left;
+}
+.update-cancel {
+    float: right;
+}
