@@ -4,11 +4,9 @@
   justify-content: center; /* Center form horizontally */
   align-items: center;     /* Center form vertically */
   min-height: 100vh;
-  background-color: #ffe6ee; /* Light pink background */
   padding: 20px;
   box-sizing: border-box;
-  margin-left: 250px;  /* Adjust this width to your sidebar's width */
-  margin-right: 20px;  /* Add right margin to prevent overflow */
+  width: 100%;  /* Adjust this width to your sidebar's width */
   overflow: hidden;    /* Prevents content from spilling */
 }
 
@@ -102,6 +100,11 @@
 .signup-link:hover {
   text-decoration: underline;
   color: #b32d5c;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Responsive adjustments for smaller screens */

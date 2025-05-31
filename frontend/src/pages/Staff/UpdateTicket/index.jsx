@@ -5,10 +5,9 @@ const UpdateTicket = () => {
     return (
         <div className='updateticket-container'>
             <div className='title'>
-                <div>
-                    
-                </div>
-                Update Ticket
+                <h2>
+                    Update Ticket
+                </h2>
             </div>
             <div className='update-table'>
                 <table class="table">
