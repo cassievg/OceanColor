@@ -27,8 +27,9 @@ const EditTicket = () => {
                 </table>
             </div>
             <div className='reply-button'>
-                <button>Reply</button>
+                <button type="button" className="btn btn-primary ticket-reply">Reply</button>
             </div>
+
             <div className='replies'>
                 <table className="table">
                     <tbody>
@@ -42,8 +43,8 @@ const EditTicket = () => {
                 </table>
             </div>
             <div className='approval-buttons'>
-                <button>approve</button>
-                <button>disapprove</button>
+                <button type="button" className="btn btn-primary ticket-disapprove">Disapprove</button>
+                <button type="button" className="btn btn-primary ticket-approve">Approve</button>
             </div>
         </div>
     )

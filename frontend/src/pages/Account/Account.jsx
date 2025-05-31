@@ -17,8 +17,8 @@ const Account = () => {
       <div className="account-box">
         <p className="account-text">Please log in or create an account to get started.</p>
         <div className="account-buttons">
-          <Link to="/account/Login" className="btn btn-primary w-100 mb-3">Login</Link>
-          <Link to="/account/Register" className="btn btn-outline-primary w-100">Sign Up</Link>
+          <Link to="/Login" className="btn btn-primary w-100 mb-3">Login</Link>
+          <Link to="/Register" className="btn btn-outline-primary w-100">Sign Up</Link>
         </div>
       </div>
     </div>

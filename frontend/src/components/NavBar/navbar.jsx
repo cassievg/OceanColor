@@ -8,7 +8,8 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <Nav className="navbar-sidebar">
+      <div className='navbar-stick'>
+        <Nav className="navbar-sidebar">
         <div className="nav-items-top">
           {/* Link will change according to access */}
           <Nav.Item>
@@ -42,6 +43,7 @@ const Navbar = () => {
           </Nav.Item> */}
         </div>
       </Nav>
+      </div>
     </div>
   );
 };

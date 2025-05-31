@@ -5,15 +5,17 @@ const UpdateTicket = () => {
     return (
         <div className='updateticket-container'>
             <div className='title'>
-                Update Ticket
+                <h2>
+                    Update Ticket
+                </h2>
             </div>
             <div className='update-table'>
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Date Created</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">ID: </th>
+                            <th scope="col">Date Created: </th>
+                            <th scope="col">Status: </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,31 +36,15 @@ const UpdateTicket = () => {
             </div>
             <div className='status-update'>
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>Sort By</option>
-                    <option value="status">status</option>
+                    <option selected value="status">Statuses</option>
                 </select>
                 <button>Update status</button>
                 <button>Lock</button>
             </div>
-            <div className='reply-button'>
-                <button>Reply</button>
-            </div>
-            <div className='replies'>
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td>name</td>
-                        </tr>
-                        <tr>
-                            <td>reply text</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
             <div className='update-buttons'>
-                <button>reply</button>
-                <button>reply & lock</button>
-                <button>cancel</button>
+                <button className='btn btn-primary update-reply'>reply</button>
+                <button className='btn btn-primary update-reply-lock'>reply & lock</button>
+                <button className='btn btn-primary update-cancel'>cancel</button>
             </div>
         </div>
     )

@@ -93,10 +93,10 @@ const TicketList = () => {
                 <table className="table">
                     <thead>
                         <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Issue</th>
-                        <th scope="col">Submit Date</th>
-                        <th scope="col">Status</th>
+                        <th scope="col" className='center-text'>ID</th>
+                        <th scope="col" className='center-text'>Issue</th>
+                        <th scope="col" className='center-text'>Submit Date</th>
+                        <th scope="col" className='center-text'>Status</th>
                         </tr>
                     </thead>
                     <tbody>

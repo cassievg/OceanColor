@@ -132,10 +132,15 @@ const CustDashboard = () => {
                 <table className="table">
                     <thead>
                         <tr>
-                        <th scope="col">ID</th>
+                        <th scope="col" className='text-center' colSpan={4}>Your Tickets</th>
+                        </tr>
+                    </thead>
+                    <thead>
+                        <tr>
+                        <th scope="col" className='text-center'>ID</th>
                         <th scope="col">Issue</th>
-                        <th scope="col">Submit Date</th>
-                        <th scope="col">Status</th>
+                        <th scope="col" className='text-center'>Submit Date</th>
+                        <th scope="col" className='text-center'>Status</th>
                         </tr>
                     </thead>
                     <tbody>
