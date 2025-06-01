@@ -56,7 +56,7 @@ const Settings = () => {
 				</div>
 				<div className='buttons'>
 					<button className='btn btn-primary' onClick={updateUser}>Save</button>
-					<button className='btn btn-primary save-back' onClick={ () => navigate('/account/login') }>Back</button>
+					<button className='btn btn-primary save-back' onClick={ () => navigate('/account') }>Back</button>
 				</div>
 			</div>
 		</div>

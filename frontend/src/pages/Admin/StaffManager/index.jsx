@@ -76,7 +76,7 @@ const StaffManager = () => {
                         <div className="accordion" id={`accordion${user.id}`}>
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="staffheading1">
-                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#${user.id}`} aria-expanded="true" aria-controls={user.id}>
+                                <button className="accordion-button h4" type="button" data-bs-toggle="collapse" data-bs-target={`#${user.id}`} aria-expanded="true" aria-controls={user.id}>
                                     {user.username}
                                 </button>
                                 </h2>
@@ -85,7 +85,7 @@ const StaffManager = () => {
                                     <div className='dashboard-table'>
                                         <table className="table">
                                             <thead>
-                                                <tr className='total-assigned h4'>Total tickets assigned: {countStatus(null, user)}</tr>
+                                                <tr className='total-assigned h5'>Total tickets assigned: {countStatus(null, user)}</tr>
                                             </thead>
                                             <tbody>
                                                 <tr>

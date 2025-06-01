@@ -43,8 +43,11 @@ const Profile = () => {
                     </div>
                 </div>
             }
-			<button className="logout-button" onClick={logout}>Log out</button>
-			<button className="logout-button logout-back" onClick={ () => navigate('/account') }>Back</button>
+            <div>
+			    <button className="logout-button" onClick={logout}>Log out</button>
+			    <button className="logout-button logout-back" onClick={ () => navigate('/account') }>Back</button>
+            </div>
+
         </div>
     );
 }

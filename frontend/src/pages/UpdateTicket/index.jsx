@@ -108,7 +108,14 @@ const UpdateTicket = () => {
                         <label for="message" class="form-label">Message:</label>
                         <textarea class="form-control" rows="3" id="message" onChange={updateReply}></textarea>
                     </div>
-                    <button className='update-reply' onClick={submitChanges}>Reply</button>
+                    {
+                    isAuthenticated && profile.level < 1 &&
+                        <>
+                        <button className='update-reply' onClick={submitChanges}>Reply</button>
+                        </> 
+                    }
+
+
                 </>
                 
             }
@@ -126,7 +133,6 @@ const UpdateTicket = () => {
                     </div>
                     <div className='update-buttons'>
                         <button className='update-reply' onClick={submitChanges}>Submit Changes</button>
-                        <button className='update-back' onClick={ () => navigate('/tickets') }>Back</button>
                     </div>
                 </>
             }
