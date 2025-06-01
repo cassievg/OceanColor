@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { useAuth } from '../../Context/AuthContext';
 import instance from '../../libs/request';
@@ -8,13 +9,13 @@ import './index.css';
 const UpdateTicket = () => {
     const { state } = useLocation();
     const { id } = state;
+    const navigate = useNavigate();
 
     const [ticket, setTicket] = useState({});
     const [showBox, setShowBox] = useState(false);
     const [reply, setReply] = useState(null);
     const [status, setStatus] = useState({status: "pending"});
     const { isAuthenticated, profile } = useAuth();
-    const [lockTicket, setLockTicket] = useState(false);
 
     const initTicket = useCallback(async () => {
         const ticketRes = await instance.get('/ticket/' + id);
@@ -32,10 +33,6 @@ const UpdateTicket = () => {
         
         setTicket(mappedTicket);
     }, [id]);
-
-    const lock = () => {
-        setLockTicket((prevLockTicket) => !prevLockTicket);
-    }
 
     const showReplybox = () => {
         setShowBox((prevShowBox) => !prevShowBox);
@@ -124,6 +121,7 @@ const UpdateTicket = () => {
                     </div>
                     <div className='update-buttons'>
                         <button className='update-reply' onClick={submitChanges}>Submit Changes</button>
+                        <button className='update-back' onClick={ () => navigate('/tickets') }>Submit Changes</button>
                     </div>
                 </>
             }

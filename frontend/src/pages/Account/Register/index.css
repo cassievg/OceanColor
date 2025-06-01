@@ -88,6 +88,10 @@
   border-color: #b32d5c;
 }
 
+.back {
+  margin-top: 18px;
+}
+
 /* Text and Link */
 .signup-text {
   margin-top: 20px;

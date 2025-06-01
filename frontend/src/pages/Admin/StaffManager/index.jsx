@@ -73,25 +73,46 @@ const StaffManager = () => {
             {
                 filteredUsers.map((user) => (
                     <div className='staff-accordion'>
-                        <div className="accordion" id="staff1">
+                        <div className="accordion" id={`accordion${user.id}`}>
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="staffheading1">
-                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#${user.id}`} aria-expanded="true" aria-controls="collapse1">
+                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#${user.id}`} aria-expanded="true" aria-controls={user.id}>
                                     {user.username}
                                 </button>
                                 </h2>
-                                <div id={user.id} className="accordion-collapse collapse show" aria-labelledby="staffheading1" data-bs-parent="#staff1">
+                                <div id={user.id} className="accordion-collapse collapse show" aria-labelledby="staffheading1" data-bs-parent={`#accordion${user.id}`}>
                                 <div className="accordion-body">
                                     <div className='dashboard-table'>
                                         <table className="table">
                                             <thead>
-                                                <tr className='total-assigned'>Total tickets assigned: {countStatus(null, user)}</tr>
+                                                <tr className='total-assigned h4'>Total tickets assigned: {countStatus(null, user)}</tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td className='status-pending'>Pending: {countStatus("pending", user)}</td>
-                                                    <td className='status-progress'>In progress: {countStatus("progress", user)}</td>
-                                                    <td className='status-solved'>Solved: {countStatus("solved", user)}</td>
+                                                    <td className='status-pending'>
+                                                        <div>
+                                                        Pending 
+                                                        </div>
+                                                        <div className='status-counts'>
+                                                        {countStatus("pending", user)}
+                                                        </div>
+                                                    </td>
+                                                    <td className='status-progress'>
+                                                        <div>
+                                                        In progress
+                                                        </div>
+                                                        <div className='status-counts'>
+                                                        {countStatus("progress", user)}
+                                                        </div>
+                                                    </td>
+                                                    <td className='status-solved'>
+                                                        <div>
+                                                        Solved
+                                                        </div>
+                                                        <div className='status-counts'>
+                                                        {countStatus("solved", user)}
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>

@@ -57,6 +57,7 @@ const CreateTicket = () => {
                     Ticket successfully created!
                 </div>
             }
+            
         </div>
     )
 }

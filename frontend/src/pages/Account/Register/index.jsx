@@ -58,6 +58,9 @@ const Register = () => {
 				<div className='buttons'>
 					<button onClick={createUser}>Sign Up</button>
 				</div>
+                <div className='back'>
+                    <button className="back-button" onClick={ () => navigate('/account/login') }>Back</button>
+                </div>
             </div>
         </div>
     );

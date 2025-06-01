@@ -108,9 +108,30 @@ const TicketList = () => {
                 <table className="table">
                     <tbody>
                         <tr>
-                            <td className='status-pending'>Pending {countStatus("pending")}</td>
-                            <td className='status-progress'>In progress {countStatus("progress")}</td>
-                            <td className='status-solved'>Solved {countStatus("solved")}</td>
+                            <td className='status-pending'>
+                                <div>
+                                    Pending
+                                </div>
+                                <div className='status-counts'>
+                                    {countStatus("pending")}
+                                </div>
+                            </td>
+                            <td className='status-progress'>
+                                <div>
+                                    In progress 
+                                </div>
+                                <div className='status-counts'>
+                                    {countStatus("progress")}
+                                </div>
+                            </td>
+                            <td className='status-solved'>
+                                <div>
+                                    Solved 
+                                </div>
+                                <div className='status-counts'>
+                                    {countStatus("solved")}
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -118,7 +139,7 @@ const TicketList = () => {
 
             <div className='search'>
                 <input className="searchbar col-8" type="text" placeholder="Search..." aria-label="searchbar" onChange={searchTickets}></input>
-                <select className="form-select" aria-label="Default select example" onChange={selectSort}>
+                <select className="form-select pointer" aria-label="Default select example" onChange={selectSort}>
                     <option selected>Sort By</option>
                     <option value="datecreated">Recently created</option>
                     <option value="lastupdated">Recently updated</option>
@@ -139,7 +160,7 @@ const TicketList = () => {
                     <tbody>
                         {
                             filteredTickets.map((ticket) => (
-                                <tr key={ticket.id} onDoubleClick={gotoEdit(ticket)}>
+                                <tr className='pointer' key={ticket.id} onDoubleClick={gotoEdit(ticket)}>
                                     <th scope="row">
                                         {ticket.id}
                                     </th>

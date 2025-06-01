@@ -28,6 +28,10 @@
     background-color: rgb(102, 177, 102) !important;
 }
 
+.status-counts {
+    float: right;
+}
+
 .id-head {
     width: 13vw;
 }
@@ -42,4 +46,8 @@
 
 .status-head {
     width: 7vw;
+}
+
+.pointer:hover {
+    cursor: pointer;
 }
