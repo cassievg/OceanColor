@@ -20,13 +20,6 @@ body {
   }
 }
 
-.app-container {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  height: 100vh;
-}
-
 /* New styles for the main content area */
 .main-content-area {
   flex-grow: 1; /* Allow it to take up remaining space */

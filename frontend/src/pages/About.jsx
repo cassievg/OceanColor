@@ -18,7 +18,6 @@ const About = () => {
       {/* Footer */}
       <footer className="footer">
         <p>© 2025 Ocean Color. All rights reserved.</p>
-        <Link to="/" className="btn-primary">Back to Home</Link>
       </footer>
     </div>
   );

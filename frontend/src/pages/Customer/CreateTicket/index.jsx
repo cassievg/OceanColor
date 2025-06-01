@@ -4,7 +4,12 @@ import './index.css';
 
 const CreateTicket = () => {
     const [tickets, setTickets] = useState([]);
-    const [ticketDetails, setTicketDetails] = useState({})
+    const [ticketDetails, setTicketDetails] = useState({});
+    const [indicator, setIndicator] = useState(false);
+
+    const showIndicator = () => {
+        setIndicator((prevIndicator) => !prevIndicator);
+    }
 
     const updateDetails = (event) => {
         const {
@@ -24,6 +29,8 @@ const CreateTicket = () => {
                 description: ticketDetails.description
             }
         )
+
+        showIndicator();
     }
 
     return (
@@ -44,6 +51,12 @@ const CreateTicket = () => {
             <div className='buttons'>
                 <button className='create-ticket' onClick={createTicket}>Submit</button>
             </div>
+            {
+                indicator &&
+                <div className='success-indicator'>
+                    Ticket successfully created!
+                </div>
+            }
         </div>
     )
 }

@@ -1,6 +1,6 @@
 // Logout.js (or wherever the logout button is placed)
 import React from 'react';
-import { useAuth } from '../context/AuthContext';
+// import { useAuth } from '../context/AuthContext';
 import { useHistory } from 'react-router-dom';
 
 const Logout = () => {

@@ -13,17 +13,21 @@ return (
 			<Nav className="navbar-sidebar">
 				<div className="nav-items-top">
 				<Nav.Item className="brand-name">
-					<img src='ocean_color_logo.jpg'></img>
+					<img src="../img/ocean_color_logo.jpg" alt='Logo' className='logo rounded'></img>
 					Ocean Color
 				</Nav.Item>
 				<Nav.Item>
-					<Nav.Link as={NavLink} to="/" className="nav-link">About Us</Nav.Link>
+					<Nav.Link as={NavLink} to="/" className="nav-link">
+						<img src="../img/about_us.png" alt='Info' className='icon rounded'></img>
+						About Us
+					</Nav.Link>
 				</Nav.Item>
 
 				{/* Everyone can see */}
 				{
 					isAuthenticated &&
 					<Nav.Item>
+						<img src="../img/account_icon.png" alt='Account' className='icon rounded'></img>
 						<Nav.Link as={NavLink} to="/tickets" className="nav-link">Tickets</Nav.Link>
 					</Nav.Item>
 				}
@@ -53,7 +57,10 @@ return (
 				}
 
 				<Nav.Item>
-					<Nav.Link as={NavLink} to="/account" className="nav-link">Account</Nav.Link>
+					<Nav.Link as={NavLink} to="/account" className="nav-link">
+					<img src="../img/account_icon.png" alt='Account' className='icon rounded'></img>
+					Account
+					</Nav.Link>
 				</Nav.Item>
 
 
