@@ -3,12 +3,12 @@ name: TicketingSys CI/CD
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - "README.md"
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   continuous-integration:
