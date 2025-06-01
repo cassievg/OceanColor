@@ -8,6 +8,7 @@ import './index.css';
 const Settings = () => {
 	// const [name, setName] = useState('');
 	const [userDetails, setUserDetails] = useState({});
+	const navigate = useNavigate();
 
 	const updateDetails = (event) => {
 		const {
@@ -55,6 +56,7 @@ const Settings = () => {
 				</div>
 				<div className='buttons'>
 					<button className='btn btn-primary' onClick={updateUser}>Save</button>
+					<button className='btn btn-primary save-back' onClick={ () => navigate('/account/login') }>Back</button>
 				</div>
 			</div>
 		</div>

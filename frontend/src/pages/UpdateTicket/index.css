@@ -20,6 +20,15 @@
     padding-top: 10px;
 }
 
+.reply-button{
+    background-color: white;
+    padding: 5px 10px;
+}
+
+.reply-back-button {
+    margin-bottom: 10px;
+}
+
 .update-reply {
     background-color: #cc3366;
     border: 2px #cc3366;
@@ -50,4 +59,8 @@
     margin-left: 10px;
     background-color: white;
     padding: 5px 10px;
+}
+
+.pointer:hover {
+    cursor: pointer;
 }

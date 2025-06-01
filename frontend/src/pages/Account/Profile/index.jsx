@@ -44,6 +44,7 @@ const Profile = () => {
                 </div>
             }
 			<button className="logout-button" onClick={logout}>Log out</button>
+			<button className="logout-button logout-back" onClick={ () => navigate('/account') }>Back</button>
         </div>
     );
 }

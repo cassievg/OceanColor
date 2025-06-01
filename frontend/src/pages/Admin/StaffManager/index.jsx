@@ -90,25 +90,19 @@ const StaffManager = () => {
                                             <tbody>
                                                 <tr>
                                                     <td className='status-pending'>
-                                                        <div>
                                                         Pending 
-                                                        </div>
                                                         <div className='status-counts'>
                                                         {countStatus("pending", user)}
                                                         </div>
                                                     </td>
                                                     <td className='status-progress'>
-                                                        <div>
                                                         In progress
-                                                        </div>
                                                         <div className='status-counts'>
                                                         {countStatus("progress", user)}
                                                         </div>
                                                     </td>
                                                     <td className='status-solved'>
-                                                        <div>
                                                         Solved
-                                                        </div>
                                                         <div className='status-counts'>
                                                         {countStatus("solved", user)}
                                                         </div>

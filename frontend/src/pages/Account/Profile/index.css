@@ -25,6 +25,10 @@
     align-self: flex-start;
 }
 
+.logout-back {
+    margin-left: 10px;
+}
+
 .logout-button:hover {
     background-color: #c82333;
 }

@@ -97,24 +97,28 @@ const UpdateTicket = () => {
                     </tbody>
                 </table>
             </div>
-            <button className='reply-button' onClick={showReplybox}>Reply</button>
-            <button className='update-back' onClick={ () => navigate('/tickets') }>Submit Changes</button>
-
+            <div className='reply-back-button'>
+                <button className='reply-button' onClick={showReplybox}>Reply</button>
+                <button className='update-back' onClick={ () => navigate('/tickets') }>Back</button>
+            </div>
             {
                 showBox &&
                 <>
                     <div class="mb-3 message">
-                        <label for="message" class="form-label">message:</label>
+                        <label for="message" class="form-label">Message:</label>
                         <textarea class="form-control" rows="3" id="message" onChange={updateReply}></textarea>
                     </div>
+                    <button className='update-reply' onClick={submitChanges}>Reply</button>
                 </>
+                
             }
+
 
             {
                 isAuthenticated && profile.level > 1 &&
                 <>
                     <div className='status-update'>
-                        <select className="form-select status-option" aria-label="Default select example" id="status" onChange={updateStatus}>
+                        <select className="form-select status-option pointer" aria-label="Default select example" id="status" onChange={updateStatus}>
                             <option value="pending">Pending</option>
                             <option value="progress">In Progress</option>
                             <option value="solved">Solved</option>
@@ -122,7 +126,7 @@ const UpdateTicket = () => {
                     </div>
                     <div className='update-buttons'>
                         <button className='update-reply' onClick={submitChanges}>Submit Changes</button>
-                        <button className='update-back' onClick={ () => navigate('/tickets') }>Submit Changes</button>
+                        <button className='update-back' onClick={ () => navigate('/tickets') }>Back</button>
                     </div>
                 </>
             }
