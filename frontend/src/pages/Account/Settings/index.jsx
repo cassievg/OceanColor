@@ -54,7 +54,7 @@ const Settings = () => {
 					</div>
 				</div>
 				<div className='buttons'>
-					<button onClick={updateUser}>Save</button>
+					<button className='btn btn-primary' onClick={updateUser}>Save</button>
 				</div>
 			</div>
 		</div>

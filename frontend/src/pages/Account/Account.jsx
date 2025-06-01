@@ -16,6 +16,7 @@ const Account = () => {
 						{
 							!isAuthenticated &&
 							<>
+								<p>Please Login or Sign up to continue further</p>
 								<Link to="/account/login" className="btn btn-primary w-100 mb-3">Login</Link>
 								<Link to="/account/register" className="btn btn-outline-primary w-100">Sign Up</Link>
 							</>

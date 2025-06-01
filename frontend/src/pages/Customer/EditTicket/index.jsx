@@ -24,8 +24,10 @@ const EditTicket = () => {
 
     return (
         <div className='updateticket-container'>
-            <div className='title'>
-                Update Ticket
+            <div className='title text-center'>
+                <h1>
+                    Update Ticket
+                </h1>
             </div>
             <div className='update-table'>
                 <table className="table">
@@ -38,10 +40,10 @@ const EditTicket = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td colSpan={3}>title</td>
+                            <td colSpan={3}>Title</td>
                         </tr>
                         <tr>
-                            <td colSpan={3}>desc</td>
+                            <td colSpan={3}>Description</td>
                         </tr>
                     </tbody>
                 </table>

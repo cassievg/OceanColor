@@ -79,7 +79,7 @@ const TicketList = () => {
                 <h2>Tickets</h2>
             </div>
             <div className='search'>
-                <input className="searchbar" type="text" placeholder="Search..." aria-label="searchbar" onChange={searchTickets}></input>
+                <input className="searchbar col-8" type="text" placeholder="Search..." aria-label="searchbar" onChange={searchTickets}></input>
                 <select className="form-select" aria-label="Default select example" onChange={selectSort}>
                     <option selected>Sort By</option>
                     <option value="datecreated">Recently created</option>
