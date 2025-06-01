@@ -117,17 +117,17 @@ const TicketList = () => {
                 <table className="table">
                     <thead>
                         <tr>
-                        <th scope="col" className='center-text'>ID</th>
-                        <th scope="col" className='center-text'>Issue</th>
-                        <th scope="col" className='center-text'>Submit Date</th>
-                        <th scope="col" className='center-text'>Status</th>
+                        <th scope="col" className='center-text id-head'>ID</th>
+                        <th scope="col" className='center-text issue-head'>Issue</th>
+                        <th scope="col" className='center-text date-head'>Submit Date</th>
+                        <th scope="col" className='center-text status-head'>Status</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             filteredTickets.map((ticket) => (
                                 <tr key={ticket.id} onDoubleClick={() => { navigate('/tickets/edit') }}>
-                                    <th scope="row">
+                                    <th scope="row" className='id-head'>
                                         {ticket.id}
                                     </th>
                                     <td>

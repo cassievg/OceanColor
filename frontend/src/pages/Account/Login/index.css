@@ -6,8 +6,8 @@
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  width: 100%;  /* Adjust this width to your sidebar's width */
   overflow: hidden;    /* Prevents content from spilling */
+  margin-left: 250px;
 }
 
 /* Login Container */
@@ -85,7 +85,7 @@
 }
 
 .login-instead {
-  margin-top: 10px !important;
+  margin-top: 18px !important;
 }
 
 /* Text and Link */
