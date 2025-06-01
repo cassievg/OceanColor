@@ -1,0 +1,12 @@
+.profile-container {
+    flex: 1;
+    padding: 5vh;
+    text-align: center;
+}
+.logout {
+    float: left;
+}
+
+.edit {
+    float: right;
+}

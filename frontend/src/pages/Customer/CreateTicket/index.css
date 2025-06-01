@@ -1,0 +1,16 @@
+.createticket-container {
+    flex: 1;
+    padding: 5vh;
+    margin-left: 250px;
+}
+
+.ticket-submit{
+    float: right;
+}
+
+.create-ticket {
+    background-color: #cc3366;
+    border: 2px #cc3366;
+    color: white;
+    padding: 7px 10px;
+}

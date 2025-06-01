@@ -1,0 +1,46 @@
+.ticketlist-container {
+    flex: 1;
+    padding: 5vh;
+    margin-left: 250px;
+}
+
+.search {
+    display: flex;
+}
+
+.dropdown {
+    display: flex;
+}
+
+.ticket-table {
+    margin-top: 10px;
+}
+
+.status-pending {
+    background-color: rgb(160, 160, 160)  !important;
+}
+.status-progress {
+    background-color: rgb(255, 255, 126) !important;
+}
+.status-closed {
+    background-color: rgb(255, 126, 126) !important;
+}
+.status-solved {
+    background-color: rgb(102, 177, 102) !important;
+}
+
+.id-head {
+    width: 13vw;
+}
+
+.issue-head {
+    width: 41vw;
+}
+
+.date-head {
+    width: 17vw;
+}
+
+.status-head {
+    width: 7vw;
+}

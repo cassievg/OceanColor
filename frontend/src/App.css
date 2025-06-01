@@ -1,0 +1,30 @@
+/* Add this to your global layout file */
+.page-container {
+  padding-left: 250px; /* Same width as the sidebar */
+  transition: padding-left 0.3s ease; /* Optional: smooth transition if the sidebar collapses */
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding-left: 200px; /* Adjust for smaller screens */
+  }
+}
+
+body {
+  transition: margin-left 0.3s ease; /* Optional: smooth transition */
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 200px; /* Adjust margin for smaller screens */
+  }
+}
+
+/* New styles for the main content area */
+.main-content-area {
+  flex-grow: 1; /* Allow it to take up remaining space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100vh; /* Set height to viewport height */
+  /* Add padding-top if your fixed navbar is at the top, though your navbar is a sidebar */
+  /* padding-top: <height-of-your-top-navbar> */
+}

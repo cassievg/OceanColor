@@ -1,0 +1,134 @@
+/* Page Wrapper */
+.signup-page {
+  display: flex;
+  justify-content: center; /* Center form horizontally */
+  align-items: center;     /* Center form vertically */
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 250px;
+  overflow: hidden;    /* Prevents content from spilling */
+}
+
+/* Signup Container */
+.signup-container {
+  max-width: 450px; /* Maximum width of the form */
+  width: 100%; /* Ensure form width stays responsive */
+  background-color: #ffffff; /* Clean white background */
+  padding: 40px 35px;
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center;
+  border: 1px solid #f0f0f0; /* Light border */
+  transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.signup-container:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Shadow on hover for interactive feel */
+}
+
+/* Signup Title */
+.signup-title {
+  color: #cc3366; /* Elegant pink */
+  font-weight: 700; /* Bold title */
+  font-size: 28px; /* Larger title for emphasis */
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Capitalize title */
+  letter-spacing: 1px; /* Slight spacing between letters */
+}
+
+/* Input Fields */
+.signup-container input[type="email"],
+.signup-container input[type="text"],
+.signup-container input[type="number"],
+.signup-container input[type="password"] {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 18px; /* Spacing between inputs */
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.signup-container input[type="email"]:focus,
+.signup-container input[type="text"]:focus,
+.signup-container input[type="number"]:focus,
+.signup-container input[type="password"]:focus {
+  border-color: #cc3366; /* Highlight border on focus */
+  background-color: #fff;
+  outline: none;
+}
+
+.signup-container input[type="email"],
+.signup-container input[type="text"],
+.signup-container input[type="number"],
+.signup-container input[type="password"] {
+  padding-left: 15px; /* Add padding for better text alignment */
+}
+
+/* Button */
+.signup-container button {
+  background-color: #cc3366; /* Elegant pink */
+  border-color: #cc3366;
+  color: white;
+  width: 100%;
+  padding: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-container button:hover {
+  background-color: #b32d5c; /* Darker pink on hover */
+  border-color: #b32d5c;
+}
+
+/* Text and Link */
+.signup-text {
+  margin-top: 20px;
+  color: #444;
+}
+
+.login-link {
+  color: #cc3366;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+  color: #b32d5c;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 35px 25px; /* Adjust padding for smaller screens */
+  }
+
+  .signup-title {
+    font-size: 24px; /* Slightly smaller title for mobile */
+  }
+
+  .signup-container input[type="email"],
+  .signup-container input[type="text"],
+  .signup-container input[type="number"],
+  .signup-container input[type="password"] {
+    font-size: 14px; /* Smaller input text size on mobile */
+  }
+
+  .signup-container button {
+    font-size: 14px; /* Smaller button text size */
+  }
+}

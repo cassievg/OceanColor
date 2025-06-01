@@ -1,0 +1,134 @@
+/* Page Wrapper */
+.login-page {
+  display: flex;
+  justify-content: center; /* Center form horizontally */
+  align-items: center;     /* Center form vertically */
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;    /* Prevents content from spilling */
+  margin-left: 250px;
+}
+
+/* Login Container */
+.login-container {
+  max-width: 450px; /* Maximum width of the form */
+  width: 100%; /* Ensure form width stays responsive */
+  background-color: #ffffff; /* Clean white background */
+  padding: 40px 35px;
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center;
+  border: 1px solid #f0f0f0; /* Light border */
+  transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.login-container:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Shadow on hover for interactive feel */
+}
+
+/* Login Title */
+.login-title {
+  color: #cc3366; /* Elegant pink */
+  font-weight: 700; /* Bold title */
+  font-size: 28px; /* Larger title for emphasis */
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Capitalize title */
+  letter-spacing: 1px; /* Slight spacing between letters */
+}
+
+/* Input Fields */
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container select {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 18px; /* Spacing between inputs */
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus,
+.login-container select:focus {
+  border-color: #cc3366; /* Highlight border on focus */
+  background-color: #fff;
+  outline: none;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  padding-left: 15px; /* Add padding for better text alignment */
+}
+
+/* Button */
+.login-container button {
+  background-color: #cc3366; /* Elegant pink */
+  border-color: #cc3366;
+  color: white;
+  width: 100%;
+  padding: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #b32d5c; /* Darker pink on hover */
+  border-color: #b32d5c;
+}
+
+.login-instead {
+  margin-top: 18px !important;
+}
+
+/* Text and Link */
+.login-text {
+  margin-top: 20px;
+  color: #444;
+}
+
+.signup-link {
+  color: #cc3366;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+  color: #b32d5c;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 35px 25px; /* Adjust padding for smaller screens */
+  }
+
+  .login-title {
+    font-size: 24px; /* Slightly smaller title for mobile */
+  }
+
+  .login-container input[type="email"],
+  .login-container input[type="password"],
+  .login-container select {
+    font-size: 14px; /* Smaller input text size on mobile */
+  }
+
+  .login-container button {
+    font-size: 14px; /* Smaller button text size */
+  }
+}
