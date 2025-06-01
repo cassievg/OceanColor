@@ -112,16 +112,13 @@ const CustDashboard = () => {
                                 {countStatus("pending")}
                             </td>
                             <td>
-                                {countStatus("waiting")}
-                            </td>
-                            <td>
                                 {countStatus("progress")}
                             </td>
                             <td>
-                                {countStatus("approved")}
+                                {countStatus("solved")}
                             </td>
                             <td>
-                                {countStatus("disapproved")}
+                                {countStatus("closed")}
                             </td>
                         </tr>
                     </tbody>

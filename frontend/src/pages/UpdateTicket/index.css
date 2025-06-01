@@ -5,6 +5,7 @@
 
 .status-update {
     height: 5vh;
+    display: flex;
 }
 
 .status-button{

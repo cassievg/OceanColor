@@ -2,12 +2,14 @@ import React, { useState, useEffect, useMemo } from 'react';
 import './index.css';
 import { useNavigate } from 'react-router-dom';
 import instance from '../../libs/request';
+import { useAuth } from '../../Context/AuthContext';
 
 const TicketList = () => {
     const navigate = useNavigate();
     const [tickets, setTickets] = useState([]);
     const [selectedSort, setSelectedSort] = useState(null);
     const [search, setSearch] = useState(null);
+    const { isAuthenticated, profile } = useAuth();
 
     const searchTickets = (event) => {
         const {
@@ -51,6 +53,15 @@ const TicketList = () => {
         setSelectedSort(target.value);
     };
 
+    const showStatus = (event) => {
+        if (profile.level < 2) {
+            
+        }
+        else {
+
+        }
+    }
+
     useEffect(() => {
         const initTickets = async () => {
             const ticketRes = await instance.get('/ticket/');
@@ -78,6 +89,20 @@ const TicketList = () => {
             <div className='title'>
                 <h2>Tickets</h2>
             </div>
+
+            <div className='status-table'>
+                <table className="table">
+                    <tbody>
+                        <tr>
+                            <td className='status-pending'>Pending {showStatus}</td>
+                            <td className='status-progress'>In progress {showStatus}</td>
+                            <td className='status-closed'>Closed {showStatus}</td>
+                            <td className='status-solved'>Solved {showStatus}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <div className='search'>
                 <input className="searchbar" type="text" placeholder="Search..." aria-label="searchbar" onChange={searchTickets}></input>
                 <select className="form-select" aria-label="Default select example" onChange={selectSort}>

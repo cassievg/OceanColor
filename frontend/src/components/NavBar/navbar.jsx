@@ -43,6 +43,14 @@ return (
 					</Nav.Item>
 				}
 
+				{/* Admin only */}
+				{
+					isAuthenticated && profile.level === 3 &&
+					<Nav.Item>
+						<Nav.Link as={NavLink} to="/admin/createaccount" className="nav-link">Create Account</Nav.Link>
+					</Nav.Item>
+				}
+
 				<Nav.Item>
 					<Nav.Link as={NavLink} to="/account" className="nav-link">Account</Nav.Link>
 				</Nav.Item>

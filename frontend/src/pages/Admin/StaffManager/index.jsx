@@ -23,10 +23,9 @@ const StaffManager = () => {
                     phone: item.phone,
                     password: item.password,
                     level: item.level,
-                    approved: item.approved,
-                    disapproved: item.disapproved,
-                    waiting: item.waiting,
-                    inprogress: item.progress
+                    closed: item.closed,
+                    progress: item.progress,
+                    solved: item.solved,
                 }
             });
             
@@ -57,38 +56,9 @@ const StaffManager = () => {
                                         <table className="table">
                                             <tbody>
                                                 <tr>
-                                                    <td rowSpan={2}>pie chart</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className='status-approved'>Approved<br></br>{user.approved}</td>
-                                                    <td className='status-disapproved'>Disapproved<br></br>{user.disapproved}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td className='status-waiting'>Waiting<br></br>{user.waiting}</td>
-                                                    <td className='status-progress'>In progress<br></br>{user.inprogress}</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div className='table-title'>
-                                        Updated Tickets
-                                    </div>
-                                    <div className='ticket-table'>
-                                        <table className="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                <th scope="col" className='text-center'>ID</th>
-                                                <th scope="col" className='text-center'>Issue</th>
-                                                <th scope="col" className='text-center'>Submit Date</th>
-                                                <th scope="col" className='text-center'>Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                <th scope="row" className='text-center'>1</th>
-                                                <td>help</td>
-                                                <td className='text-center'>12-21-12</td>
-                                                <td className='text-center'>pls</td>
+                                                    <td className='status-closed'>Closed<br></br>{user.closed}</td>
+                                                    <td className='status-progress'>In progress<br></br>{user.progress}</td>
+                                                    <td className='status-solved'>Solved<br></br>{user.solved}</td>
                                                 </tr>
                                             </tbody>
                                         </table>

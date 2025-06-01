@@ -17,15 +17,14 @@ import Settings from './pages/Account/Settings/index';
 import { CartProvider } from './Context/CartContext';
 import Navbar from './components/NavBar/navbar';
 import TicketList from './pages/TicketList/index';
-import EditTicket from './pages/Customer/EditTicket/index';
-import CustDashboard from './pages/Customer/CustDashboard/index';
-import UpdateTicket from './pages/Staff/UpdateTicket';
+// import EditTicket from './Customer/EditTicket/index';
+import UpdateTicket from './pages/UpdateTicket';
 import StaffManager from './pages/Admin/StaffManager';
 import CreateTicket from './pages/Customer/CreateTicket';
-import Profile from './pages/Account/Profile/index'
+import Profile from './pages/Account/Profile/index';
+import CreateAccount from  './pages/Admin/CreateAccount';
 
 import './App.css';
-import StaffDashboard from './pages/Staff/StaffDashboard';
 
 function App() {
     return (
@@ -66,11 +65,10 @@ function App() {
 
                     {/* Level 3 */}
                     <Route path="/admin/manager" element={<StaffManager />}/>
+                    <Route path="/admin/createaccount" element={<CreateAccount />}/>
                     
 
                     {/* Level 2 */}
-                    <Route path="/staff/dashboard" element={<StaffDashboard />}/>
-                    <Route path="/tickets/update" element={<UpdateTicket />}/>
                     <Route path="/tickets" element={<TicketList />}/>
                     
                     {/* Level 1 */}
@@ -79,11 +77,10 @@ function App() {
                         <Route path="profile" element={<Profile />} />
                         <Route path="settings" element={<Settings />} />
                     </Route>
+                    <Route path="/tickets/edit" element={<UpdateTicket />}/>
                     {/* Cannot be accessed by Level 2, can be accessed by Level 3 */}
-                    <Route path="/tickets/edit" element={<EditTicket />}/>
                     <Route path="/tickets/create" element={<CreateTicket />}/>
                     {/* Cannot be accessed by other levels */}
-                    <Route path="/customer/dashboard" element={<CustDashboard />}/>
 
                     {/* Level 0 */}
                     <Route path="/" element={<About />}/>
