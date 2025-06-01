@@ -6,7 +6,7 @@
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  width: 100%;
+  margin-left: 250px;
   overflow: hidden;    /* Prevents content from spilling */
 }
 
@@ -86,6 +86,10 @@
 .signup-container button:hover {
   background-color: #b32d5c; /* Darker pink on hover */
   border-color: #b32d5c;
+}
+
+.permission-btn {
+  margin-bottom: 18px;
 }
 
 /* Text and Link */

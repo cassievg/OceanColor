@@ -53,7 +53,7 @@ const CreateAccount = () => {
                         <label for="password" class="form-label">Password</label>
                         <input class="form-control" type="password" aria-label="password" id="password" onChange={updateDetails}></input>
                     </div>
-                    <select className="form-select" aria-label="Default select example" id="level" onChange={updateDetails}>
+                    <select className="form-select permission-btn" aria-label="Default select example" id="level" onChange={updateDetails}>
                         <option selected>Permissions</option>
                         <option value="1">Customer</option>
                         <option value="2">Staff</option>

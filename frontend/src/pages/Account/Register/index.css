@@ -6,7 +6,7 @@
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  width: 100%;
+  margin-left: 250px;
   overflow: hidden;    /* Prevents content from spilling */
 }
 
