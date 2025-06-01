@@ -10,7 +10,7 @@ const TicketSchema = new mongoose.Schema({
   creator: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   title: { type: String, required: true },
   description: { type: String, required: true },
-  status: { type: String, required: false, default: "pending" },
+  status: { type: String, required: false, default: "Pending" },
   responses: [ReplySchema],
   datecreated: { type: Date, required: false, default: Date.now },
   assign: { type: mongoose.Schema.Types.ObjectId, ref: "User" }

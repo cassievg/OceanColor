@@ -111,19 +111,19 @@ const TicketList = () => {
                             <td className='status-pending'>
                                     Pending
                                 <div className='status-counts'>
-                                    {countStatus("pending")}
+                                    {countStatus("Pending")}
                                 </div>
                             </td>
                             <td className='status-progress'>
                                     In progress 
                                 <div className='status-counts'>
-                                    {countStatus("progress")}
+                                    {countStatus("Progress")}
                                 </div>
                             </td>
                             <td className='status-solved'>
                                     Solved 
                                 <div className='status-counts'>
-                                    {countStatus("solved")}
+                                    {countStatus("Solved")}
                                 </div>
                             </td>
                         </tr>

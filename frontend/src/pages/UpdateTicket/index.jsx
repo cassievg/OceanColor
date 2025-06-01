@@ -14,7 +14,7 @@ const UpdateTicket = () => {
     const [ticket, setTicket] = useState({});
     const [showBox, setShowBox] = useState(false);
     const [reply, setReply] = useState(null);
-    const [status, setStatus] = useState({status: "pending"});
+    const [status, setStatus] = useState({status: "Pending"});
     const { isAuthenticated, profile } = useAuth();
 
     const initTicket = useCallback(async () => {
@@ -126,9 +126,9 @@ const UpdateTicket = () => {
                 <>
                     <div className='status-update'>
                         <select className="form-select status-option pointer" aria-label="Default select example" id="status" onChange={updateStatus}>
-                            <option value="pending">Pending</option>
-                            <option value="progress">In Progress</option>
-                            <option value="solved">Solved</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Progress">In Progress</option>
+                            <option value="Solved">Solved</option>
                         </select>
                     </div>
                     <div className='update-buttons'>
