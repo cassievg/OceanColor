@@ -14,10 +14,8 @@ body {
   transition: margin-left 0.3s ease; /* Optional: smooth transition */
 }
 
-@media (max-width: 768px) {
-  body {
-    margin-left: 200px; /* Adjust margin for smaller screens */
-  }
+.app-container {
+  display: flex !important;
 }
 
 /* New styles for the main content area */

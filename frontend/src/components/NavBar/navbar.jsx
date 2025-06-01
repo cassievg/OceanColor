@@ -46,7 +46,11 @@ return (
 					isAuthenticated && profile.level === 1 &&
 					<Nav.Item>
 						<Nav.Link as={NavLink} to="/tickets/create" className="nav-link">
+<<<<<<< Updated upstream
 						<img src={Account} alt='Account' className='icon rounded'></img>
+=======
+						<img src="../img/create_ticket.png" alt='Account' className='icon rounded'></img>
+>>>>>>> Stashed changes
 						Create Ticket
 						</Nav.Link>
 					</Nav.Item>

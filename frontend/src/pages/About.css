@@ -2,11 +2,9 @@
   flex: 1;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
-  background-color: #fff0f5; /* Light pink background to match login/register */
 }
 
 .hero {
-  background: #fce4ec;
   padding: 6rem 3rem;
   text-align: center;
 }
@@ -26,89 +24,59 @@
   margin-bottom: 2rem;
 }
 
-.section {
-  padding: 4rem 2rem;
+.aboutus-container {
+  padding: 3vw 2vh;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.aboutus-container h1 {
+  font-size: 2.3rem;
+}
+
+.aboutus-content .highlight {
   color: #e91e63;
 }
 
-.text-content {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.values-list {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+.aboutus-content p {
   font-size: 1.2rem;
 }
 
-.values-list li {
-  margin: 1rem 0;
-  color: #555;
+.branches-container {
+  padding: 3vw 2vh;
 }
 
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.branches-container h1{
+  font-size: 2.3rem;
 }
 
-.team-member {
-  background: #ffe6ee; /* Match register/login container pink */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 2rem;
-  max-width: 300px;
-  text-align: center;
+.branches-content {
+  margin-top: 1.5rem;
 }
 
-.team-member img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+.branches-img {
+  width: 23vw;
+  height: 30vh;
+  display: block;
+  margin: auto;
+  border: 3px solid black;
 }
 
-.team-member h3 {
-  margin-bottom: 0.5rem;
+.faq-container {
+  padding: 3vw 2vh;
 }
 
-.team-member p {
-  font-size: 0.9rem;
-  color: #777;
+.faq-container h1 {
+  font-size: 2.3rem;
 }
 
-.alt-bg {
-  background-color: #fff0f5; /* Match site-wide background color */
+.faq-answers {
+  font-weight: 400;
 }
 
-.footer {
-  background-color: #f8bbd0;
-  text-align: center;
-  padding: 1.5rem 0;
-  color: #333;
-  margin-top: 3rem;
+.contact-container {
+  padding: 3vw 2vh;
 }
 
-.footer a {
-  text-decoration: none;
-  font-weight: 500;
-  background-color: #e91e63;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
-}
-
-.footer a:hover {
-  background-color: #d81b60;
+.contact-icon {
+  width: 32px;
+  height: 32px;
 }

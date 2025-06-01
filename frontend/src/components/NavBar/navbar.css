@@ -59,15 +59,7 @@
   border-color: #ac315c;
 }
 
-@media (max-width: 768px) {
-  .navbar-container {
-    width: 200px;
-  }
 
-  .logout-btn {
-    margin-top: 60px;
-  }
-}
 
 
 /* Brand name style with adjusted position */
@@ -94,4 +86,41 @@
   height: 22px;
   margin-left: 5px;
   margin-right: 26px;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    width: 200px;
+  }
+  .navbar-stick{
+  width: 200px;
+
+  }
+
+}
+
+@media (max-width: 425px) {
+  .navbar-container {
+    width: 135px;
+  }
+  .navbar-stick{
+  width: 135px;
+
+  }
+  .brand-name {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar-container {
+    width: 85px;
+  }
+  .navbar-stick{
+  width: 85px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
 }
