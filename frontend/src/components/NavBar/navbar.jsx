@@ -6,11 +6,13 @@ import { useAuth } from '../../Context/AuthContext';
 import ImgOcean from '../../img/ocean_color_logo.jpg';
 import AboutUs from '../../img/about_us.png';
 import Tickets from '../../img/ticket_icon.png';
+import addTickets from '../../img/create_ticket.png';
 import Account from '../../img/account_icon.png';
 import addAccount from '../../img/add_account_icon.png';
 import Staff from '../../img/staff_icon.png';
 
 import './navbar.css';
+import CreateTicket from '../../pages/Customer/CreateTicket';
 
 const Navbar = () => {
 const { isAuthenticated, profile } = useAuth();
@@ -47,7 +49,7 @@ return (
 					isAuthenticated && profile.level === 1 &&
 					<Nav.Item>
 						<Nav.Link as={NavLink} to="/tickets/create" className="nav-link">
-						<img src={Account} alt='Account' className='icon rounded'></img>
+						<img src={addTickets} alt='Account' className='icon rounded'></img>
 						Create Ticket
 						</Nav.Link>
 					</Nav.Item>
