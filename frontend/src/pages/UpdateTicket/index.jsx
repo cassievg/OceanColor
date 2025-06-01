@@ -103,7 +103,7 @@ const UpdateTicket = () => {
                 showBox &&
                 <>
                     <div class="mb-3 message">
-                        <label for="message" class="form-label">Reply</label>
+                        <label for="message" class="form-label">message:</label>
                         <textarea class="form-control" rows="3" id="message" onChange={updateReply}></textarea>
                     </div>
                 </>
