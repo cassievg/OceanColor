@@ -3,7 +3,6 @@ import './index.css';
 import { useNavigate } from 'react-router-dom';
 import instance from '../../libs/request';
 import { useAuth } from '../../Context/AuthContext';
-import ticket from '../../../../backend/models/ticket';
 
 const TicketList = () => {
     const navigate = useNavigate();
