@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
 
-import Tambora from '../img/Tambora-branch.png';
-import Cengkareng from '../img/Cengkareng-branch.png';
+import Tambora from '../img/tambora-branch.png';
+import Cengkareng from '../img/cengkareng-branch.png';
 import WA from '../img/WA-logo.png';
 import Phone from '../img/phone-icon.png';
 import Calendar from '../img/calendar-icon.png';
@@ -55,7 +55,7 @@ const About = () => {
             <div className='col text-center'>
                 <figure className='figure'>
                 <img src= {Cengkareng} alt='Branch1' className='branches-img rounded'></img>
-                <h4>Tambora Branch</h4>
+                <h4>Cengkareng ranch</h4>
                 <h6>Jl. Utama Raya No.12 4, RT.4/RW.3, Cengkareng Bar.,<br></br>
                 Kecamatan Cengkareng, Kota Jakarta Barat
                 </h6>
