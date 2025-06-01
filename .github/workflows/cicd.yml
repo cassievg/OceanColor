@@ -14,9 +14,16 @@ jobs:
   continuous-integration:
     runs-on: ubuntu-latest
 
+    env:
+      MY_VARIABLE: "This is a test ${{ secrets.DOCKER_USERNAME }}"
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+        
+      - name: test CI
+        uses: echo $MY_VARIABLE
 
       - name: Login to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
