@@ -1,23 +1,14 @@
 // src/App.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import Home from './pages/Home';
 import About from './pages/About';
-// import Contact from './pages/Contact';
-// import Shop from './pages/shop';
-// import Cart from './pages/Cart';
 import Account from './pages/Account/Account';
 import Login from './pages/Account/Login/index';
 import Register from './pages/Account/Register/index';
 import Settings from './pages/Account/Settings/index';
-// import Ticket from './pages/Customer/Ticket';
-// import TicketManagement from './pages/Staff/TicketManagement';
-// import StaffManagement from './pages/Admin/StaffManagement';
-// import PrivateRoute from './components/PrivateRoute';
 import { CartProvider } from './Context/CartContext';
 import Navbar from './components/NavBar/navbar';
 import TicketList from './pages/TicketList/index';
-// import EditTicket from './Customer/EditTicket/index';
 import UpdateTicket from './pages/UpdateTicket';
 import StaffManager from './pages/Admin/StaffManager';
 import CreateTicket from './pages/Customer/CreateTicket';

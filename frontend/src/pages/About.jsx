@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
 
-import Tambora from '../img/tambora-branch.png';
-import Cengkareng from '../img/cengkareng-branch.png';
+import Tambora from '../img/tambora.png';
+import Cengkareng from '../img/cengkareng.png';
 import WA from '../img/WA-logo.png';
 import Phone from '../img/phone-icon.png';
 import Calendar from '../img/calendar-icon.png';
