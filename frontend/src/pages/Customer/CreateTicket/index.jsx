@@ -11,6 +11,10 @@ const CreateTicket = () => {
         setIndicator((prevIndicator) => !prevIndicator);
     }
 
+    const falseIndicator = (indicator) => {
+        setIndicator((indicator) => false);
+    }
+
     const updateDetails = (event) => {
         const {
             target
@@ -49,11 +53,11 @@ const CreateTicket = () => {
             <div className='form'>
                 <div class="mb-3 title">
                     <label for="title" class="form-label">Issue Title</label>
-                    <input class="form-control" type="text" aria-label="title" id="title" required placeholder='What is the issue?' onChange={updateDetails}></input>
+                    <input class="form-control" type="text" aria-label="title" id="title" required placeholder='What is the issue?' onChange={updateDetails} onClick={falseIndicator}></input>
                 </div>
                 <div class="mb-3 description">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" rows="3" id="description" required placeholder='Describe the situation and how can we help' onChange={updateDetails}></textarea>
+                    <textarea class="form-control" rows="3" id="description" required placeholder='Describe the situation and how can we help' onChange={updateDetails} onClick={falseIndicator}></textarea>
                 </div>
             </div>
             <div className='buttons'>

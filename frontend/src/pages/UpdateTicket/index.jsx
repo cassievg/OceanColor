@@ -23,6 +23,11 @@ const UpdateTicket = () => {
         setIndicator((prevIndicator) => !prevIndicator);
     }
 
+    const clearInput = () => {
+        const inputMessage = document.getElementById('message');
+        inputMessage.value = ''
+    }
+
     const initTicket = useCallback(async () => {
         const ticketRes = await instance.get('/ticket/' + id);
         const ticketData = ticketRes.data;
@@ -51,7 +56,6 @@ const UpdateTicket = () => {
             ...prevStatus,
             [target.id]: target.value,
         }));
-        showIndicator();
     }
 
     const updateReply = (event) => {
@@ -63,8 +67,6 @@ const UpdateTicket = () => {
             ...prevReply,
             [target.id]: target.value,
         }));
-
-        showIndicator();
     }
 
     const submitChanges = async () => {
@@ -74,6 +76,7 @@ const UpdateTicket = () => {
             response: reply,
         })
         await initTicket();
+        clearInput();
         showIndicator();
     }
     
@@ -121,7 +124,7 @@ const UpdateTicket = () => {
                     {
                     !(isAuthenticated && profile.level > 1) &&
                         <>
-                        <button className='update-reply' onClick={updateReply}>Reply</button>
+                        <button className='update-reply' onClick={submitChanges}>Reply</button>
                         {
                             indicator &&
                             <div className='success-indicator'>
