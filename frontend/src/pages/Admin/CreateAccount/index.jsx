@@ -5,8 +5,12 @@ import './index.css';
 
 
 const CreateAccount = () => {
-    const [name, setName] = useState('');
     const [userDetails, setUserDetails] = useState({})
+    const [indicator, setIndicator] = useState(false);
+
+    const showIndicator = () => {
+        setIndicator((prevIndicator) => !prevIndicator);
+    }
 
     const updateDetails = (event) => {
         const {
@@ -29,6 +33,7 @@ const CreateAccount = () => {
                 level: userDetails.level
             }
         )
+        showIndicator();
     }
 
     return (
@@ -62,6 +67,12 @@ const CreateAccount = () => {
                 <div className='buttons'>
                     <button onClick={createUser}>Create</button>
                 </div>
+                {
+                indicator &&
+                <div className='success-indicator'>
+                    Ticket successfully created!
+                </div>
+                }
             </div>
         </div>
     );

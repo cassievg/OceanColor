@@ -44,11 +44,11 @@ const Login = () => {
                 <div className='form'>
                     <div class="mb-3 email">
                         <label for="email" class="form-label">Email</label>
-                        <input class="form-control" type="text" aria-label="email" id="email" onChange={updateDetails}></input>
+                        <input class="form-control" type="text" required aria-label="email" id="email" onChange={updateDetails}></input>
                     </div>
                     <div class="mb-3 password">
                         <label for="password" class="form-label">Password</label>
-                        <input class="form-control" type="password" aria-label="password" id="password" onChange={updateDetails}></input>
+                        <input class="form-control" type="password" required aria-label="password" id="password" onChange={updateDetails}></input>
                     </div>
                 </div>
                 <div className='buttons'>

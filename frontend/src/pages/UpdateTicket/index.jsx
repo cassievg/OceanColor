@@ -10,12 +10,18 @@ const UpdateTicket = () => {
     const { state } = useLocation();
     const { id } = state;
     const navigate = useNavigate();
+    
 
     const [ticket, setTicket] = useState({});
     const [showBox, setShowBox] = useState(false);
     const [reply, setReply] = useState(null);
     const [status, setStatus] = useState({status: "Pending"});
+    const [indicator, setIndicator] = useState(false);
     const { isAuthenticated, profile } = useAuth();
+
+    const showIndicator = () => {
+        setIndicator((prevIndicator) => !prevIndicator);
+    }
 
     const initTicket = useCallback(async () => {
         const ticketRes = await instance.get('/ticket/' + id);
@@ -45,6 +51,7 @@ const UpdateTicket = () => {
             ...prevStatus,
             [target.id]: target.value,
         }));
+        showIndicator();
     }
 
     const updateReply = (event) => {
@@ -56,6 +63,8 @@ const UpdateTicket = () => {
             ...prevReply,
             [target.id]: target.value,
         }));
+
+        showIndicator();
     }
 
     const submitChanges = async () => {
@@ -65,6 +74,7 @@ const UpdateTicket = () => {
             response: reply,
         })
         await initTicket();
+        showIndicator();
     }
     
     useEffect(() => {
@@ -109,15 +119,18 @@ const UpdateTicket = () => {
                         <textarea class="form-control" rows="3" id="message" onChange={updateReply}></textarea>
                     </div>
                     {
-                    isAuthenticated && profile.level < 1 &&
+                    !(isAuthenticated && profile.level > 1) &&
                         <>
-                        <button className='update-reply' onClick={submitChanges}>Reply</button>
+                        <button className='update-reply' onClick={updateReply}>Reply</button>
+                        {
+                            indicator &&
+                            <div className='success-indicator'>
+                                Succesfully replied!
+                            </div>
+                        }
                         </> 
                     }
-
-
                 </>
-                
             }
 
 
@@ -134,6 +147,12 @@ const UpdateTicket = () => {
                     <div className='update-buttons'>
                         <button className='update-reply' onClick={submitChanges}>Submit Changes</button>
                     </div>
+                        {
+                            indicator &&
+                            <div className='success-indicator'>
+                                Changes succesfully applied!
+                            </div>
+                        }
                 </>
             }
 
