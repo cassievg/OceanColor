@@ -18,13 +18,13 @@ const About = () => {
       {/* Our Story */}
       <section className="section">
         <h2 className="section-title">Our Story</h2>
-        <p className="text-content">
+        <p className="text-content text-center">
           Ocean Color started with a simple goal: to bring high-quality paints and tools to every home and business. We believe in making your space as beautiful and unique as you are, and our team is dedicated to providing top-notch products that make your projects easier and more enjoyable.
         </p>
       </section>
 
       {/* Our Values */}
-      <section className="section alt-bg">
+      <section className="section">
         <h2 className="section-title">Our Values</h2>
         <ul className="values-list">
           <li><strong>Quality</strong>: We only offer the best products that stand the test of time.</li>

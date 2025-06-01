@@ -10,3 +10,7 @@
 .dropdown {
     display: flex;
 }
+
+.ticket-table {
+    margin-top: 10px;
+}

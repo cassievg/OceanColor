@@ -42,7 +42,7 @@ const CreateTicket = () => {
                 </div>
             </div>
             <div className='buttons'>
-                <button onClick={createTicket}>submit</button>
+                <button className='create-ticket' onClick={createTicket}>Submit</button>
             </div>
         </div>
     )
