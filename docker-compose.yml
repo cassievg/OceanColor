@@ -6,6 +6,7 @@ services:
     restart: always
     environment:
       MONGO_URI: ${MONGO_URI}
+
     ports:
       - "3008:3008"
 
@@ -15,4 +16,4 @@ services:
     depends_on:
       - backend
     ports:
-      - "3007:3007"
+      - "3007:5000"
