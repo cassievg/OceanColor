@@ -1,12 +1,5 @@
-.app-container {
-  width: 100vw !important;
-  height: 100vh !important;
-  display: contents !important;
-}
-
 .about-container {
-  margin-left: 250px;
-  padding: 20px;
+  flex: 1;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   background-color: #fff0f5; /* Light pink background to match login/register */

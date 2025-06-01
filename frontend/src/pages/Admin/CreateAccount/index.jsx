@@ -35,7 +35,7 @@ const CreateAccount = () => {
     return (
         <div className="signup-page">
             <div className="signup-container">
-                <h2 className="signup-title">Sign Up</h2>
+                <h2 className="signup-title">Create Account</h2>
                 <div className='form'>
                     <div class="mb-3 username">
                         <label for="username" class="form-label">Name</label>
@@ -61,7 +61,7 @@ const CreateAccount = () => {
                     </select>
                 </div>
                 <div className='buttons'>
-                    <button onClick={createUser}>Sign Up</button>
+                    <button onClick={createUser}>Create</button>
                 </div>
             </div>
         </div>

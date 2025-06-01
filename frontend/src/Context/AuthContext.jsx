@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+
+import instance from '../libs/request';
 
 const AuthContext = createContext();
 const useAuth = () => useContext(AuthContext);
@@ -6,6 +8,20 @@ const useAuth = () => useContext(AuthContext);
 function AuthProvider(props) {
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const [profile, setProfile] = useState(null);
+
+	useEffect(() => {
+		const auth = async () => {
+			try {
+				const response = await instance.post('/auth/login');
+				setIsAuthenticated(true);
+				setProfile(response.data);
+			}
+			catch (err) {
+			}
+		}
+
+		auth();
+	}, []);
 
 	return (
 		<AuthContext.Provider
@@ -16,8 +32,8 @@ function AuthProvider(props) {
 				setProfile,
 			}}
 		>
-      {props.children}
-    </AuthContext.Provider>
+			{props.children}
+		</AuthContext.Provider>
 	)
 }
 

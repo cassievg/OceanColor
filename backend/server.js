@@ -1,7 +1,8 @@
 import express from 'express';
-import mongoose from 'mongoose';
+import mongoose, { mongo } from 'mongoose';
 import dotenv from 'dotenv';
 import session from 'express-session';
+import MongoStore from 'connect-mongo';
 
 import ticketRoutes from './routes/tickets.js';
 import userRoutes from './routes/users.js';
@@ -24,6 +25,7 @@ async function run() {
             secure: false,
             httpOnly: false,
         },
+        store: MongoStore.create({ client: mongoose.connection.getClient() })
     }));
 
     app.use('/api/ticket', ticketRoutes);

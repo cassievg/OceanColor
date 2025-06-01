@@ -3,6 +3,7 @@ import './index.css';
 import { useNavigate } from 'react-router-dom';
 import instance from '../../libs/request';
 import { useAuth } from '../../Context/AuthContext';
+import ticket from '../../../../backend/models/ticket';
 
 const TicketList = () => {
     const navigate = useNavigate();
@@ -10,6 +11,20 @@ const TicketList = () => {
     const [selectedSort, setSelectedSort] = useState(null);
     const [search, setSearch] = useState(null);
     const { isAuthenticated, profile } = useAuth();
+
+    const countStatus = (status) => {
+        let result = [...tickets];
+
+        return result.filter((ticket) => (ticket.status === status)).length
+    }
+
+    const gotoEdit = (ticket) => (event) => {
+        navigate('/tickets/edit', {
+            state: {
+                id: ticket.id
+            }
+        });
+    }
 
     const searchTickets = (event) => {
         const {
@@ -55,10 +70,10 @@ const TicketList = () => {
 
     const showStatus = (event) => {
         if (profile.level < 2) {
-            
+            // show only customer tickets
         }
         else {
-
+            // show all tickets
         }
     }
 
@@ -94,10 +109,9 @@ const TicketList = () => {
                 <table className="table">
                     <tbody>
                         <tr>
-                            <td className='status-pending'>Pending {showStatus}</td>
-                            <td className='status-progress'>In progress {showStatus}</td>
-                            <td className='status-closed'>Closed {showStatus}</td>
-                            <td className='status-solved'>Solved {showStatus}</td>
+                            <td className='status-pending'>Pending {countStatus("pending")}</td>
+                            <td className='status-progress'>In progress {countStatus("progress")}</td>
+                            <td className='status-solved'>Solved {countStatus("solved")}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -126,8 +140,8 @@ const TicketList = () => {
                     <tbody>
                         {
                             filteredTickets.map((ticket) => (
-                                <tr key={ticket.id} onDoubleClick={() => { navigate('/tickets/edit') }}>
-                                    <th scope="row" className='id-head'>
+                                <tr key={ticket.id} onDoubleClick={gotoEdit(ticket)}>
+                                    <th scope="row">
                                         {ticket.id}
                                     </th>
                                     <td>
