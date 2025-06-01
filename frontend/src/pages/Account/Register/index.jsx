@@ -7,6 +7,7 @@ import './index.css';
 const Register = () => {
     const [name, setName] = useState('');
 	const [userDetails, setUserDetails] = useState({})
+	const navigate = useNavigate();
 
 	const updateDetails = (event) => {
 		const {
@@ -28,6 +29,8 @@ const Register = () => {
 				password: userDetails.password
 			}
 		)
+
+		navigate('/account/login');
 	}
 
     return (
