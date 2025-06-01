@@ -13,6 +13,7 @@ return (
 			<Nav className="navbar-sidebar">
 				<div className="nav-items-top">
 				<Nav.Item className="brand-name">
+					<img src='ocean_color_logo.jpg'></img>
 					Ocean Color
 				</Nav.Item>
 				<Nav.Item>
