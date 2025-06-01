@@ -3,7 +3,6 @@ import mongoose, { mongo } from 'mongoose';
 import dotenv from 'dotenv';
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
-import cors from 'cors';
 
 import ticketRoutes from './routes/tickets.js';
 import userRoutes from './routes/users.js';
@@ -17,10 +16,6 @@ async function run() {
 
     await mongoose.connect(process.env.MONGO_URI);
 
-    app.use(cors({
-        origin: "https://e2425-wads-l4acg4-client.csbihub.id",
-        credentials: true
-    }));
     app.use(express.json());
     app.use(session({
         secret: 'secret',
