@@ -27,8 +27,10 @@ return (
 				{
 					isAuthenticated &&
 					<Nav.Item>
-						<img src="../img/account_icon.png" alt='Account' className='icon rounded'></img>
-						<Nav.Link as={NavLink} to="/tickets" className="nav-link">Tickets</Nav.Link>
+						<Nav.Link as={NavLink} to="/tickets" className="nav-link">
+						<img src="../img/ticket_icon.png" alt='Account' className='icon rounded'></img>
+						Tickets
+						</Nav.Link>
 					</Nav.Item>
 				}
 
@@ -36,7 +38,10 @@ return (
 				{
 					isAuthenticated && profile.level === 1 &&
 					<Nav.Item>
-						<Nav.Link as={NavLink} to="/tickets/create" className="nav-link">Create Ticket</Nav.Link>
+						<Nav.Link as={NavLink} to="/tickets/create" className="nav-link">
+						<img src="../img/account_icon.png" alt='Account' className='icon rounded'></img>
+						Create Ticket
+						</Nav.Link>
 					</Nav.Item>
 				}
 
@@ -44,7 +49,10 @@ return (
 				{
 					isAuthenticated && profile.level === 3 &&
 					<Nav.Item>
-						<Nav.Link as={NavLink} to="/admin/manager" className="nav-link">Staffs</Nav.Link>
+						<Nav.Link as={NavLink} to="/admin/manager" className="nav-link">
+						<img src="../img/staff_icon.png" alt='Account' className='icon rounded'></img>
+						Staffs
+						</Nav.Link>
 					</Nav.Item>
 				}
 
@@ -52,7 +60,10 @@ return (
 				{
 					isAuthenticated && profile.level === 3 &&
 					<Nav.Item>
-						<Nav.Link as={NavLink} to="/admin/createaccount" className="nav-link">Create Account</Nav.Link>
+						<Nav.Link as={NavLink} to="/admin/createaccount" className="nav-link">
+						<img src="../img/add_account_icon.png" alt='Account' className='icon rounded'></img>
+						Create Account
+						</Nav.Link>
 					</Nav.Item>
 				}
 
