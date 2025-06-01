@@ -12,6 +12,17 @@ const CreateAccount = () => {
         setIndicator((prevIndicator) => !prevIndicator);
     }
 
+    const clearInput = () => {
+        const inputName = document.getElementById('username');
+        const inputEmail = document.getElementById('email');
+        const inputPhone = document.getElementById('phone');
+        const inputPass = document.getElementById('password');
+        inputName.value = '';
+        inputEmail.value = '';
+        inputPhone.value = '';
+        inputPass.value = '';
+    }
+
     const updateDetails = (event) => {
         const {
             target
@@ -34,6 +45,7 @@ const CreateAccount = () => {
             }
         )
         showIndicator();
+        clearInput();
     }
 
     return (

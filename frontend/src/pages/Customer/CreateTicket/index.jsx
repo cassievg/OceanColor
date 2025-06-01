@@ -15,6 +15,14 @@ const CreateTicket = () => {
         setIndicator((indicator) => false);
     }
 
+    const clearInput = () => {
+        const inputTitle = document.getElementById('title');
+        const inputDesc = document.getElementById('description');
+        
+        inputTitle.value = ''
+        inputDesc.value = ''
+    }
+
     const updateDetails = (event) => {
         const {
             target
@@ -36,13 +44,6 @@ const CreateTicket = () => {
 
         showIndicator();
         clearInput();
-    }
-
-    const clearInput = () => {
-        const inputTitle = document.getElementById('title');
-        const inputDesc = document.getElementById('description');
-        inputTitle.value = ''
-        inputDesc.value = ''
     }
 
     return (

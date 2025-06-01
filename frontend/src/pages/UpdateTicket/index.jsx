@@ -23,6 +23,10 @@ const UpdateTicket = () => {
         setIndicator((prevIndicator) => !prevIndicator);
     }
 
+    const falseIndicator = (indicator) => {
+        setIndicator((indicator) => false);
+    }
+
     const clearInput = () => {
         const inputMessage = document.getElementById('message');
         inputMessage.value = ''
@@ -119,7 +123,7 @@ const UpdateTicket = () => {
                 <>
                     <div class="mb-3 message">
                         <label for="message" class="form-label">Message:</label>
-                        <textarea class="form-control" rows="3" id="message" onChange={updateReply}></textarea>
+                        <textarea class="form-control" rows="3" id="message" onChange={updateReply} onClick={falseIndicator}></textarea>
                     </div>
                     {
                     !(isAuthenticated && profile.level > 1) &&
