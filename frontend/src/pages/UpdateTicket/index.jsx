@@ -98,6 +98,7 @@ const UpdateTicket = () => {
                 </table>
             </div>
             <button className='reply-button' onClick={showReplybox}>Reply</button>
+            <button className='update-back' onClick={ () => navigate('/tickets') }>Submit Changes</button>
 
             {
                 showBox &&
