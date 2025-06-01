@@ -47,7 +47,11 @@ return (
 					<Nav.Item>
 						<Nav.Link as={NavLink} to="/tickets/create" className="nav-link">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 						<img src={Account} alt='Account' className='icon rounded'></img>
+=======
+						<img src="../img/create_ticket.png" alt='Account' className='icon rounded'></img>
+>>>>>>> Stashed changes
 =======
 						<img src="../img/create_ticket.png" alt='Account' className='icon rounded'></img>
 >>>>>>> Stashed changes
