@@ -13,6 +13,9 @@ const TicketSchema = new mongoose.Schema({
   status: { type: String, required: false, default: "pending" },
   responses: [ReplySchema],
   datecreated: { type: Date, required: false, default: Date.now },
+  assign: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
 });
 
 export default mongoose.model('Ticket', TicketSchema);
+
+export const Reply = mongoose.model('Reply', ReplySchema);
