@@ -108,9 +108,9 @@ const TicketList = () => {
                 <table className="table">
                     <tbody>
                         <tr>
-                            <td className='status-pending'>Pending {countStatus("pending")}</td>
-                            <td className='status-progress'>In progress {countStatus("progress")}</td>
-                            <td className='status-solved'>Solved {countStatus("solved")}</td>
+                            <td className='status-pending'>Pending: {countStatus("pending")}</td>
+                            <td className='status-progress'>In progress: {countStatus("progress")}</td>
+                            <td className='status-solved'>Solved: {countStatus("solved")}</td>
                         </tr>
                     </tbody>
                 </table>

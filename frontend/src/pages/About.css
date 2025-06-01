@@ -2,11 +2,18 @@
   flex: 1;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
+  /* Remove background color from the main container if individual sections will have their own */
+  /* background-color: #fff0f5; */
+  padding: 20px;
+  margin-right: 20px;
 }
 
 .hero {
-  padding: 6rem 3rem;
+  padding-top: 40px; /* Remove top padding */
+  padding-bottom: 6rem; /* Keep existing bottom padding */
+
   text-align: center;
+  background-color: #f3f3f3;
 }
 
 .hero h1 {
@@ -24,8 +31,16 @@
   margin-bottom: 2rem;
 }
 
-.aboutus-container {
-  padding: 3vw 2vh;
+/* Styles for individual section containers */
+.aboutus-container,
+.branches-container,
+.faq-container,
+.contact-container {
+  background-color: #fff; /* White background for the boxes */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Space inside the box */
+  margin: 20px; /* Space around the box */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.253); /* Optional: add a subtle shadow */
 }
 
 .aboutus-container h1 {
@@ -38,10 +53,6 @@
 
 .aboutus-content p {
   font-size: 1.2rem;
-}
-
-.branches-container {
-  padding: 3vw 2vh;
 }
 
 .branches-container h1{
@@ -60,10 +71,6 @@
   border: 3px solid black;
 }
 
-.faq-container {
-  padding: 3vw 2vh;
-}
-
 .faq-container h1 {
   font-size: 2.3rem;
 }
@@ -72,11 +79,25 @@
   font-weight: 400;
 }
 
-.contact-container {
-  padding: 3vw 2vh;
+.contact-container h1 {
+    font-size: 2.3rem;
 }
 
 .contact-icon {
   width: 32px;
   height: 32px;
+  vertical-align: middle; /* Align icon nicely with text */
+  margin-right: 10px;
+}
+
+/* Ensure tables within containers don't have conflicting margins/paddings */
+.faq-content table,
+.contact-content table {
+    margin-bottom: 0;
+}
+
+/* Style for table cells within the contact section for better alignment */
+.contact-content td,
+.contact-content th {
+    padding: 8px 0;
 }
