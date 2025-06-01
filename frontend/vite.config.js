@@ -19,6 +19,6 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: "dist",
     },
-    plugins: [react(), tailwindcss()],
+    plugins: [react()],
   }
 })
