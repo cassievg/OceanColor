@@ -13,7 +13,6 @@ const StaffManager = () => {
     }, [users]);
 
     const countStatus = (status, staff) => {
-        
         let result = [...tickets];
 
         if (status) {
@@ -56,7 +55,7 @@ const StaffManager = () => {
                     description: item.description,
                     status: item.status,
                     datecreated: item.datecreated,
-                    locked: item.locked,
+                    assign: item.assign,
                 }
             });
             
