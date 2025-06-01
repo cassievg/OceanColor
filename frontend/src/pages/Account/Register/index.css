@@ -1,12 +1,12 @@
 /* Page Wrapper */
 .signup-page {
+  flex: 1;
   display: flex;
   justify-content: center; /* Center form horizontally */
   align-items: center;     /* Center form vertically */
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  margin-left: 250px;
   overflow: hidden;    /* Prevents content from spilling */
 }
 

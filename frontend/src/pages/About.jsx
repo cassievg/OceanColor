@@ -2,6 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
 
+import Tambora from '../img/tambora-branch.png';
+import Cengkareng from '../img/cengkareng-branch.png';
+import WA from '../img/WA-logo.png';
+import Phone from '../img/phone-icon.png';
+import Calendar from '../img/calendar-icon.png';
+import Clock from '../img/clock-icon.png';
+
 const About = () => {
   return (
     <div className="about-container">
@@ -38,7 +45,7 @@ const About = () => {
           <div className='row'>
             <div className='col text-center'>
               <figure className='figure'>
-                <img src='../img/tambora-branch.png' alt='Branch1' className='branches-img rounded'></img>
+                <img src= {Tambora} alt='Branch1' className='branches-img rounded'></img>
                 <h4>Tambora Branch</h4>
                 <h6>Jl. Jembatan Besi Raya No.209 2, RT.2/RW.3, <br></br>
                 Jemb. Besi, Kec. Tambora, Kota Jakarta Barat
@@ -47,7 +54,7 @@ const About = () => {
             </div>
             <div className='col text-center'>
                 <figure className='figure'>
-                <img src='../img/cengkareng-branch.png' alt='Branch1' className='branches-img rounded'></img>
+                <img src= {Cengkareng} alt='Branch1' className='branches-img rounded'></img>
                 <h4>Tambora Branch</h4>
                 <h6>Jl. Utama Raya No.12 4, RT.4/RW.3, Cengkareng Bar.,<br></br>
                 Kecamatan Cengkareng, Kota Jakarta Barat
@@ -133,16 +140,16 @@ const About = () => {
           <table className='table table-borderless'>
             <tbody>
               <tr>
-                <th><img src='../img/WA-logo.png' alt='WA' className='contact-icon'></img> 081325777621 | 081315966873 </th>
+                <th><img src= {WA} alt='WA' className='contact-icon'></img> 081325777621 | 081315966873 </th>
               </tr>
               <tr>
-                <th><img src='../img/phone-icon.png' alt='Phone' className='contact-icon'></img> (021) 6300 721 | (021) 6386 2789 </th>
+                <th><img src= {Phone} alt='Phone' className='contact-icon'></img> (021) 6300 721 | (021) 6386 2789 </th>
               </tr>
               <tr>
-                <th><img src='../img/calendar-icon.png' alt='Date' className='contact-icon'></img> Monday - Saturday </th>
+                <th><img src= {Calendar} alt='Date' className='contact-icon'></img> Monday - Saturday </th>
               </tr>
               <tr>
-                <th><img src='../img/clock-icon.png' alt='Clock' className='contact-icon'></img> 08.00 - 17.00 WIB </th>
+                <th><img src= {Clock} alt='Clock' className='contact-icon'></img> 08.00 - 17.00 WIB </th>
               </tr>
             </tbody>
           </table>

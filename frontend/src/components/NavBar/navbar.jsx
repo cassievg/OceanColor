@@ -7,6 +7,7 @@ import ImgOcean from '../../img/ocean_color_logo.jpg';
 import AboutUs from '../../img/about_us.png';
 import Tickets from '../../img/ticket_icon.png';
 import Account from '../../img/account_icon.png';
+import addAccount from '../../img/add_account_icon.png';
 import Staff from '../../img/staff_icon.png';
 
 import './navbar.css';
@@ -46,15 +47,7 @@ return (
 					isAuthenticated && profile.level === 1 &&
 					<Nav.Item>
 						<Nav.Link as={NavLink} to="/tickets/create" className="nav-link">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 						<img src={Account} alt='Account' className='icon rounded'></img>
-=======
-						<img src="../img/create_ticket.png" alt='Account' className='icon rounded'></img>
->>>>>>> Stashed changes
-=======
-						<img src="../img/create_ticket.png" alt='Account' className='icon rounded'></img>
->>>>>>> Stashed changes
 						Create Ticket
 						</Nav.Link>
 					</Nav.Item>
@@ -76,7 +69,7 @@ return (
 					isAuthenticated && profile.level === 3 &&
 					<Nav.Item>
 						<Nav.Link as={NavLink} to="/admin/createaccount" className="nav-link">
-						<img src={Account} alt='Account' className='icon rounded'></img>
+						<img src={addAccount} alt='Account' className='icon rounded'></img>
 						Create Account
 						</Nav.Link>
 					</Nav.Item>
@@ -88,23 +81,6 @@ return (
 					Account
 					</Nav.Link>
 				</Nav.Item>
-
-
-
-
-
-
-
-
-				{/* <Nav.Item>
-					<Nav.Link as={NavLink} to="/shop" className="nav-link">Shop</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link as={NavLink} to="/contact" className="nav-link">Contact</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link as={NavLink} to="/cart" className="nav-link">Cart</Nav.Link>
-				</Nav.Item> */}
 				</div>
 			</Nav>
 		</div>
