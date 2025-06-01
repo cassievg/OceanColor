@@ -52,7 +52,7 @@ function App() {
                     {/* Cannot be accessed by other levels */}
 
                     {/* Level 0 */}
-                    <Route path="/" element={<About />}/>
+                    <Route path="/" element={<Settings />}/>
                     {/* Cannot be accessed by other levels */}
                     <Route path="/account">
                         <Route index element={<Account />} />
