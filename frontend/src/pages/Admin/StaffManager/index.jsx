@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import './index.css';
 import instance from '../../../libs/request';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import user from '../../../../../backend/models/user';
 
 const StaffManager = () => {
     const [users, setUsers] = useState([]);

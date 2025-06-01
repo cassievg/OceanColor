@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import instance from '../../../libs/request';
 import './index.css';
-import user from '../../../../../backend/models/user';
 
 
 const CreateAccount = () => {

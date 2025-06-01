@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 import instance from '../../libs/request';
 import './index.css';
-import ticket from '../../../../backend/models/ticket';
 
 const UpdateTicket = () => {
     const { state } = useLocation();
