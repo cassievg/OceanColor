@@ -1,11 +1,9 @@
 .account-page {
-  display: flex;
-  justify-content: center;
+  flex: 1;
+  padding: 5vh;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  margin-left: 250px;
-  overflow: hidden;
+  justify-content: center;
+  display: grid;
 }
 
 .account-box {
