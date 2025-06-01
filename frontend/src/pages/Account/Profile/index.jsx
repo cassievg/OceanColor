@@ -22,22 +22,28 @@ const Profile = () => {
     return (
         <div className='profile-container'>
             {
-                <div class="profile-details">
-                    <label for="username" class="col-sm-2 col-form-label">Username</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="username" defaultValue={profile.username} />
+                <div className="profile-details">
+                    <div className="row">
+                        <label htmlFor="username" className="col-sm-2 col-form-label">Username</label>
+                        <div className="col-sm-10">
+                            <input type="text" readOnly className="form-control-plaintext" id="username" defaultValue={profile.username} />
+                        </div>
                     </div>
-                    <label for="email" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="email" defaultValue={profile.email} />
+                    <div className="row">
+                        <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
+                        <div className="col-sm-10">
+                            <input type="text" readOnly className="form-control-plaintext" id="email" defaultValue={profile.email} />
+                        </div>
                     </div>
-                    <label for="phone" class="col-sm-2 col-form-label">Phone Number</label>
-                    <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" id="phone" defaultValue={profile.phone} />
+                    <div className="row">
+                        <label htmlFor="phone" className="col-sm-2 col-form-label">Phone Number</label>
+                        <div className="col-sm-10">
+                            <input type="text" readOnly className="form-control-plaintext" id="phone" defaultValue={profile.phone} />
+                        </div>
                     </div>
                 </div>
             }
-			<button onClick={logout}>Log out</button>
+			<button className="logout-button" onClick={logout}>Log out</button>
         </div>
     );
 }
