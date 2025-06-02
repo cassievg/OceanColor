@@ -7,7 +7,7 @@ const useAuth = () => useContext(AuthContext);
 
 function AuthProvider(props) {
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
-	const [profile, setProfile] = useState(null);
+	const [profile, setProfile] = useState({});
 
 	useEffect(() => {
 		const auth = async () => {
