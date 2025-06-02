@@ -40,9 +40,8 @@ cd frontend
 npm install
 
 3. Create a `.env` file in the root:
-PORT=5000  
-MONGO\_URI=your\_mongodb\_uri  
-SESSION\_SECRET=your\_secret
+MONGO\_URI=mongodb://e2425-wads-l4acg4:zl05bobu@localhost:27018/e2425-wads-l4acg4?  
+
 
 4. Start the development environment:
 
