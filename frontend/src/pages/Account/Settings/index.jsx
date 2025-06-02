@@ -7,6 +7,7 @@ import './index.css';
 
 const Settings = () => {
 	// const [name, setName] = useState('');
+	const { profile } = useAuth();
 	const [userDetails, setUserDetails] = useState({});
 	const navigate = useNavigate();
 
@@ -22,7 +23,7 @@ const Settings = () => {
 	}
 
 	const updateUser = async () => {
-		await instance.put('/user/',
+		await instance.put('/user/' + profile.id, 
 			{
 				username:  userDetails.username,
 				email: userDetails.email,
