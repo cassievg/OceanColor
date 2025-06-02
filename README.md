@@ -40,7 +40,7 @@ cd frontend
 npm install
 
 3. Create a `.env` file in the root:
-MONGO\_URI=mongodb://e2425-wads-l4acg4:zl05bobu@localhost:27018/e2425-wads-l4acg4?  
+MONGO\_URI=mongodb://e2425-wads-l4acg4:zl05bobu@localhost:27018/e2425-wads-l4acg4?authSource=e2425-wads-l4acg4  
 
 
 4. Start the development environment:
