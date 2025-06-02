@@ -7,7 +7,7 @@ import './index.css';
 
 const Settings = () => {
 	// const [name, setName] = useState('');
-	const { profile } = useAuth();
+	const { profile, setProfile } = useAuth();
 	const [userDetails, setUserDetails] = useState({});
 	const navigate = useNavigate();
 	const [indicator, setIndicator] = useState(false);
@@ -28,7 +28,7 @@ const Settings = () => {
 	}
 
 	const updateUser = async () => {
-		await instance.put('/user/' + profile._id, 
+		const response = await instance.put('/user/' + profile._id, 
 			{
 				username:  userDetails.username,
 				email: userDetails.email,
@@ -36,6 +36,8 @@ const Settings = () => {
 				password: userDetails.password
 			}
 		)
+		
+		setProfile({...response.data});
 
 		showIndicator();
 	}
