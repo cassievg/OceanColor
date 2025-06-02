@@ -36,7 +36,7 @@ cd OceanColor
 
 2. Install dependencies:
 npm install  
-cd client  
+cd frontend  
 npm install
 
 3. Create a `.env` file in the root:
@@ -46,8 +46,8 @@ SESSION\_SECRET=your\_secret
 
 4. Start the development environment:
 
-npm run server   \# backend
-cd client && npm start   \# frontend
+cd backend; npm install; npm run dev   \# backend
+cd frontend; npm run dev   \# frontend
 
 **API Documentation (Swagger)**
 We use Swagger (OpenAPI 3.0) to document and test all API endpoints.
