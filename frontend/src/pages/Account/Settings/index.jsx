@@ -38,7 +38,7 @@ const Settings = () => {
 		)
 		
 		setProfile({...response.data});
-
+		
 		showIndicator();
 	}
 
