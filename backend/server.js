@@ -18,12 +18,12 @@ async function run() {
 
     app.use(express.json());
     app.use(session({
-        secret: 'aDcSnZup',
+        secret: 'secret',
         resave: true,
         saveUninitialized: false,
         cookie: {
-            secure: true,
-            httpOnly: true,
+            secure: false,
+            httpOnly: false,
         },
         store: MongoStore.create({ client: mongoose.connection.getClient() })
     }));
