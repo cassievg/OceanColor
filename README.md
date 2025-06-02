@@ -47,6 +47,7 @@ SESSION\_SECRET=your\_secret
 4. Start the development environment:
 
 cd backend; npm install; npm run dev   \# backend
+
 cd frontend; npm run dev   \# frontend
 
 **API Documentation (Swagger)**
