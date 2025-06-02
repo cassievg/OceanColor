@@ -32,7 +32,7 @@ const Settings = () => {
 			}
 		)
 
-		navigate('account/profile');
+		navigate('../../account/profile');
 	}
 
 	return (
