@@ -23,7 +23,6 @@ const Settings = () => {
 	}
 
 	const updateUser = async () => {
-		console.log(profile.id);
 		await instance.put('/user/' + profile._id, 
 			{
 				username:  userDetails.username,
@@ -33,7 +32,7 @@ const Settings = () => {
 			}
 		)
 
-		navigate('./account/profile');
+		navigate('account/profile');
 	}
 
 	return (
