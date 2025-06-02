@@ -10,6 +10,11 @@ const Settings = () => {
 	const { profile } = useAuth();
 	const [userDetails, setUserDetails] = useState({});
 	const navigate = useNavigate();
+	const [indicator, setIndicator] = useState(false);
+
+	const showIndicator = () => {
+		setIndicator((prevIndicator) => !prevIndicator);
+	}
 
 	const updateDetails = (event) => {
 		const {
@@ -32,7 +37,7 @@ const Settings = () => {
 			}
 		)
 
-		navigate('/account/profile');
+		showIndicator();
 	}
 
 	return (
@@ -42,15 +47,15 @@ const Settings = () => {
 				<div className='form'>
 					<div class="mb-3 username">
 						<label for="username" class="form-label">Name</label>
-						<input class="form-control" type="text" aria-label="username" id="username" onChange={updateDetails}></input>
+						<input class="form-control" type="text" aria-label="username" id="username" defaultValue={profile.username} onChange={updateDetails}></input>
 					</div>
 					<div class="mb-3 email">
 						<label for="email" class="form-label">Email</label>
-						<input class="form-control" type="text" aria-label="email" id="email" onChange={updateDetails}></input>
+						<input class="form-control" type="text" aria-label="email" id="email" defaultValue={profile.email} onChange={updateDetails}></input>
 					</div>
 					<div class="mb-3 phone">
 						<label for="phone" class="form-label">Phone Number</label>
-						<input class="form-control" type="text" aria-label="phone" id="phone" onChange={updateDetails}></input>
+						<input class="form-control" type="text" aria-label="phone" id="phone" defaultValue={profile.phone} onChange={updateDetails}></input>
 					</div>
 					<div class="mb-3 password">
 						<label for="password" class="form-label">Password</label>
@@ -61,6 +66,12 @@ const Settings = () => {
 					<button className='btn btn-primary' onClick={updateUser}>Save</button>
 					<button className='btn btn-primary save-back' onClick={ () => navigate('/account') }>Back</button>
 				</div>
+				{
+					indicator &&
+					<div className='indicator'>
+						Update successful!
+					</div>
+				}
 			</div>
 		</div>
 	);
