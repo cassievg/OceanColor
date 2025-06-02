@@ -61,6 +61,10 @@ router.put('/:id', async (req, res) => {
 
     const ticket = await Ticket.findById(id);
 
+    if (!ticket) {
+        return res.status(404).json({ message: 'Ticket not found' });
+    }
+
     if (!ticket.responses) {
         ticket.responses = [];
     }
