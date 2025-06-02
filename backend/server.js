@@ -22,8 +22,8 @@ async function run() {
         resave: true,
         saveUninitialized: false,
         cookie: {
-            secure: false,
-            httpOnly: false,
+            secure: true,
+            httpOnly: true,
         },
         store: MongoStore.create({ client: mongoose.connection.getClient() })
     }));
