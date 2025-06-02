@@ -23,7 +23,8 @@ const Settings = () => {
 	}
 
 	const updateUser = async () => {
-		await instance.put('/user/' + profile.id, 
+		console.log(profile.id);
+		await instance.put('/user/' + profile._id, 
 			{
 				username:  userDetails.username,
 				email: userDetails.email,
