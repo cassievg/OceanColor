@@ -31,8 +31,8 @@ This is a full-stack Helpdesk Ticketing System developed as part of the Web Appl
 \#Installation
 
 1. Clone the repository:
-git clone https://github.com/your-username/helpdesk-ticketing-system.git  
-cd helpdesk-ticketing-system
+git clone https://github.com/normalplayar/OceanColor.git
+cd OceanColor
 
 2. Install dependencies:
 npm install  
