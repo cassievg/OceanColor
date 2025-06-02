@@ -1,24 +1,24 @@
 \# Helpdesk Ticketing System
 
-\#\# Overview
+\#Overview
 
 This is a full-stack Helpdesk Ticketing System developed as part of the Web Application Development and Security (COMP6703001) final project. The application enables role-based ticket submission, tracking, and resolution for customers, staff, and admins. The system follows secure web development practices and includes complete API documentation via Swagger (OpenAPI 3.0).
 
 \--  
-\#\# Features
+\# Features
 
-\- \*\*User Authentication\*\* with sessions and cookies  
-\- \*\*Role-based Access Control\*\* (Customer, Staff, Admin)  
-\- \*\*Ticket Management\*\* (CRUD operations with replies)  
-\-  \*\*Auto-assignment of Tickets\*\* to staff  
-\- \*\*Search & Filter Tickets\*\*  
-\- \*\*Mockup-based UI\*\* designed in Figma  
-\-  \*\*Deployment with CI/CD Pipeline\*\*  
-\- \*\*API Documentation via Swagger\*\*
+\- \*User Authentication\*\* with sessions and cookies  
+\- \*Role-based Access Control\*\* (Customer, Staff, Admin)  
+\- \*Ticket Management\*\* (CRUD operations with replies)  
+\-  \*Auto-assignment of Tickets\*\* to staff  
+\- \*Search & Filter Tickets\*\*  
+\- \*Mockup-based UI\*\* designed in Figma  
+\-  \*Deployment with CI/CD Pipeline\*\*  
+\- \*API Documentation via Swagger\*\*
 
 \---
 
-\#\# Technologies Used
+\#Technologies Used
 
 \- \*\*Frontend\*\*: React.js, HTML, CSS, JavaScript  
 \- \*\*Backend\*\*: Node.js, Express.js  
@@ -28,22 +28,18 @@ This is a full-stack Helpdesk Ticketing System developed as part of the Web Appl
 
 \---
 
-\#\# Installation
+\#Installation
 
 1. Clone the repository:
-
-\`\`\`bash  
 git clone https://github.com/your-username/helpdesk-ticketing-system.git  
 cd helpdesk-ticketing-system
 
 2. Install dependencies:
-
 npm install  
 cd client  
 npm install
 
 3. Create a `.env` file in the root:
-
 PORT=5000  
 MONGO\_URI=your\_mongodb\_uri  
 SESSION\_SECRET=your\_secret
@@ -51,15 +47,11 @@ SESSION\_SECRET=your\_secret
 4. Start the development environment:
 
 npm run server   \# backend
-
 cd client && npm start   \# frontend
 
 **API Documentation (Swagger)**
-
 We use Swagger (OpenAPI 3.0) to document and test all API endpoints.
-
 ### 🔗 How to Access
-
 * Open Swagger Editor  
 * Import the `swagger.json` file located in the root of this repository  
 * Interact with the API using the interface
