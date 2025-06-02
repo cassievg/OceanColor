@@ -69,11 +69,11 @@ We use Swagger (OpenAPI 3.0) to document and test all API endpoints.
 
 ## **Project Structure**
 
-/client          → React front-end  
-/server          → Node.js backend  
+/frontend          → React front-end  
+/backend          → Node.js backend  
 /models          → MongoDB models (User, Ticket, Reply)  
 /routes          → API route handlers  
-/context         → React AuthContext for auth logic  
+/Context         → React AuthContext for auth logic  
 /swagger.json    → API documentation file
 
 ## **Deployment**
@@ -81,7 +81,7 @@ We use Swagger (OpenAPI 3.0) to document and test all API endpoints.
 * The system is containerized with Docker  
 * CI/CD pipeline ensures automatic deployment on push  
 * Sessions and environment variables are securely managed on the server  
-* Hosted using a cloud service (specify if known)
+* Hosted using cloudflared
 
 ## **Lessons Learned**
 
@@ -90,5 +90,4 @@ We use Swagger (OpenAPI 3.0) to document and test all API endpoints.
 * Implemented secure, session-based authentication and authorization  
 * Learned to configure and troubleshoot Docker and CI/CD pipelines  
 * Used Swagger for live API documentation and real-time endpoint testing  
-* Understood the importance of clean, scalable project structure and collaboration
 
