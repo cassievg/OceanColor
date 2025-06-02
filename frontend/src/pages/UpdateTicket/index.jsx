@@ -115,7 +115,7 @@ const UpdateTicket = () => {
                 </table>
             </div>
             <div className='reply-back-button'>
-                <button className='reply-button' onClick={showReplybox}>Reply</button>
+                <button className='reply-button' onClick={showReplybox}>Open</button>
                 <button className='update-back' onClick={ () => navigate('/tickets') }>Back</button>
             </div>
             {

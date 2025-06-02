@@ -49,19 +49,19 @@ const Settings = () => {
 				<div className='form'>
 					<div class="mb-3 username">
 						<label for="username" class="form-label">Name</label>
-						<input class="form-control" type="text" aria-label="username" id="username" defaultValue={profile.username} onChange={updateDetails}></input>
+						<input class="form-control" type="text" aria-label="username" id="username" required defaultValue={profile.username} onChange={updateDetails}></input>
 					</div>
 					<div class="mb-3 email">
 						<label for="email" class="form-label">Email</label>
-						<input class="form-control" type="text" aria-label="email" id="email" defaultValue={profile.email} onChange={updateDetails}></input>
+						<input class="form-control" type="text" aria-label="email" id="email" required defaultValue={profile.email} onChange={updateDetails}></input>
 					</div>
 					<div class="mb-3 phone">
 						<label for="phone" class="form-label">Phone Number</label>
-						<input class="form-control" type="text" aria-label="phone" id="phone" defaultValue={profile.phone} onChange={updateDetails}></input>
+						<input class="form-control" type="text" aria-label="phone" id="phone" required defaultValue={profile.phone} onChange={updateDetails}></input>
 					</div>
 					<div class="mb-3 password">
 						<label for="password" class="form-label">Password</label>
-						<input class="form-control" type="password" aria-label="password" id="password" onChange={updateDetails}></input>
+						<input class="form-control" type="password" aria-label="password" id="password" required onChange={updateDetails}></input>
 					</div>
 				</div>
 				<div className='buttons'>
